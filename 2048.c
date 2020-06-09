@@ -59125,7 +59125,8 @@ int main(int argc, char **argv)
                             }
                             continue;
                 }
-                case SDL_MOUSEBUTTONDOWN : 
+                case SDL_MOUSEBUTTONDOWN :
+                {
                     /* Cas où l'utilisateur clic sur "QUIT" dans MENU */
                     if ((((event.button.x >= 200)&&(event.button.x <= 600))&&((event.button.y >= 568)&&(event.button.y <= 668)))&&(affichage_menu==0))
                     {
@@ -59758,8 +59759,9 @@ int main(int argc, char **argv)
                     {
                         continue;
                     }
-                case SDL_QUIT : program_launched = SDL_FALSE; break;
-    			default : break;		
+                }
+                case SDL_QUIT : {program_launched = SDL_FALSE; break;}
+    			default : {break;}		
     		}
     	}
     }
