@@ -334,10 +334,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -350,14 +350,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -375,10 +375,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -391,14 +391,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -416,10 +416,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -432,14 +432,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -457,10 +457,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -473,14 +473,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -498,10 +498,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -514,14 +514,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -539,10 +539,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -555,14 +555,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -580,10 +580,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -596,14 +596,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -621,10 +621,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -637,14 +637,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -662,10 +662,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -678,14 +678,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -703,10 +703,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -719,14 +719,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -744,10 +744,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
+                                            Texture_case1 = SDL_CreateTextureFromSurface(renderer, case1);
                                             SDL_FreeSurface(case1);
                                             
-                                            if (texture_case1 == NULL)
+                                            if (Texture_case1 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -760,14 +760,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case1, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case1, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case1, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -791,10 +791,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -807,14 +807,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -832,10 +832,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -848,14 +848,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -873,10 +873,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -889,14 +889,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -914,10 +914,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -930,14 +930,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -955,10 +955,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -971,14 +971,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -996,10 +996,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1012,14 +1012,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1037,10 +1037,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1053,14 +1053,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1078,10 +1078,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1094,14 +1094,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1119,10 +1119,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1135,14 +1135,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1160,10 +1160,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1176,14 +1176,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1201,10 +1201,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
+                                            Texture_case2 = SDL_CreateTextureFromSurface(renderer, case2);
                                             SDL_FreeSurface(case2);
                                             
-                                            if (texture_case2 == NULL)
+                                            if (Texture_case2 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1217,14 +1217,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case2, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case2, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case2, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1248,10 +1248,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1264,14 +1264,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1289,10 +1289,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1305,14 +1305,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1330,10 +1330,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1346,14 +1346,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1371,10 +1371,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1387,14 +1387,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1412,10 +1412,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1428,14 +1428,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1453,10 +1453,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1469,14 +1469,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1494,10 +1494,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1510,14 +1510,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1535,10 +1535,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1551,14 +1551,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1576,10 +1576,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1592,14 +1592,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1617,10 +1617,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1633,14 +1633,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1658,10 +1658,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
+                                            Texture_case3 = SDL_CreateTextureFromSurface(renderer, case3);
                                             SDL_FreeSurface(case3);
                                             
-                                            if (texture_case3 == NULL)
+                                            if (Texture_case3 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1674,14 +1674,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case3, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case3, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case3, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1705,10 +1705,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1721,14 +1721,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1746,10 +1746,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1762,14 +1762,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1787,10 +1787,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1803,14 +1803,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1828,10 +1828,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1844,14 +1844,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1869,10 +1869,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1885,14 +1885,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1910,10 +1910,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1926,14 +1926,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1951,10 +1951,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1967,14 +1967,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -1992,10 +1992,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2008,14 +2008,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2033,10 +2033,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2049,14 +2049,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2074,10 +2074,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2090,14 +2090,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2115,10 +2115,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
+                                            Texture_case4 = SDL_CreateTextureFromSurface(renderer, case4);
                                             SDL_FreeSurface(case4);
                                             
-                                            if (texture_case4 == NULL)
+                                            if (Texture_case4 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2131,14 +2131,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 30;
                                             
-                                            if (SDL_QueryTexture(texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case4, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case4, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case4, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2162,10 +2162,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2178,14 +2178,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2203,10 +2203,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2219,14 +2219,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2244,10 +2244,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2260,14 +2260,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2285,10 +2285,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2301,14 +2301,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2326,10 +2326,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2342,14 +2342,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2367,10 +2367,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2383,14 +2383,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2408,10 +2408,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2424,14 +2424,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2449,10 +2449,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2465,14 +2465,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2490,10 +2490,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2506,14 +2506,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2531,10 +2531,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2547,14 +2547,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2572,10 +2572,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
+                                            Texture_case5 = SDL_CreateTextureFromSurface(renderer, case5);
                                             SDL_FreeSurface(case5);
                                             
-                                            if (texture_case5 == NULL)
+                                            if (Texture_case5 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2588,14 +2588,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case5, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case5, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case5, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2619,10 +2619,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2635,14 +2635,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2660,10 +2660,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2676,14 +2676,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2701,10 +2701,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2717,14 +2717,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2742,10 +2742,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2758,14 +2758,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2783,10 +2783,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2799,14 +2799,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2824,10 +2824,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2840,14 +2840,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2865,10 +2865,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2881,14 +2881,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2906,10 +2906,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2922,14 +2922,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2947,10 +2947,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2963,14 +2963,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -2988,10 +2988,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3004,14 +3004,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3029,10 +3029,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
+                                            Texture_case6 = SDL_CreateTextureFromSurface(renderer, case6);
                                             SDL_FreeSurface(case6);
                                             
-                                            if (texture_case6 == NULL)
+                                            if (Texture_case6 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3045,14 +3045,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case6, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case6, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case6, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3076,10 +3076,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3092,14 +3092,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3117,10 +3117,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3133,14 +3133,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3158,10 +3158,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3174,14 +3174,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3199,10 +3199,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3215,14 +3215,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3240,10 +3240,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3256,14 +3256,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3281,10 +3281,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3297,14 +3297,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3322,10 +3322,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3338,14 +3338,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3363,10 +3363,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3379,14 +3379,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3404,10 +3404,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3420,14 +3420,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3445,10 +3445,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3461,14 +3461,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3486,10 +3486,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
+                                            Texture_case7 = SDL_CreateTextureFromSurface(renderer, case7);
                                             SDL_FreeSurface(case7);
                                             
-                                            if (texture_case7 == NULL)
+                                            if (Texture_case7 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3502,14 +3502,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case7, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case7, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case7, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3533,10 +3533,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3549,14 +3549,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3574,10 +3574,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3590,14 +3590,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3615,10 +3615,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3631,14 +3631,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3656,10 +3656,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3672,14 +3672,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3697,10 +3697,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3713,14 +3713,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3738,10 +3738,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3754,14 +3754,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3779,10 +3779,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3795,14 +3795,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3820,10 +3820,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3836,14 +3836,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3861,10 +3861,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3877,14 +3877,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3902,10 +3902,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3918,14 +3918,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3943,10 +3943,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
+                                            Texture_case8 = SDL_CreateTextureFromSurface(renderer, case8);
                                             SDL_FreeSurface(case8);
                                             
-                                            if (texture_case8 == NULL)
+                                            if (Texture_case8 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3959,14 +3959,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 222;
                                             
-                                            if (SDL_QueryTexture(texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case8, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case8, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case8, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -3990,10 +3990,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4006,14 +4006,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4031,10 +4031,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4047,14 +4047,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4072,10 +4072,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4088,14 +4088,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4113,10 +4113,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4129,14 +4129,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4154,10 +4154,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4170,14 +4170,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4195,10 +4195,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4211,14 +4211,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4236,10 +4236,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4252,14 +4252,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4277,10 +4277,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4293,14 +4293,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4318,10 +4318,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4334,14 +4334,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4359,10 +4359,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4375,14 +4375,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4400,10 +4400,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
+                                            Texture_case9 = SDL_CreateTextureFromSurface(renderer, case9);
                                             SDL_FreeSurface(case9);
                                             
-                                            if (texture_case9 == NULL)
+                                            if (Texture_case9 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4416,14 +4416,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case9, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case9, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case9, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4447,10 +4447,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4463,14 +4463,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4488,10 +4488,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4504,14 +4504,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4529,10 +4529,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4545,14 +4545,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4570,10 +4570,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4586,14 +4586,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4611,10 +4611,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4627,14 +4627,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4652,10 +4652,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4668,14 +4668,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4693,10 +4693,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4709,14 +4709,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4734,10 +4734,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4750,14 +4750,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4775,10 +4775,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4791,14 +4791,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4816,10 +4816,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4832,14 +4832,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4857,10 +4857,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
+                                            Texture_case10 = SDL_CreateTextureFromSurface(renderer, case10);
                                             SDL_FreeSurface(case10);
                                             
-                                            if (texture_case10 == NULL)
+                                            if (Texture_case10 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4873,14 +4873,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case10, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case10, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case10, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4904,10 +4904,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4920,14 +4920,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4945,10 +4945,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4961,14 +4961,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -4986,10 +4986,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5002,14 +5002,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5027,10 +5027,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5043,14 +5043,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5068,10 +5068,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5084,14 +5084,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5109,10 +5109,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5125,14 +5125,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5150,10 +5150,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5166,14 +5166,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5191,10 +5191,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5207,14 +5207,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5232,10 +5232,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5248,14 +5248,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5273,10 +5273,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5289,14 +5289,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5314,10 +5314,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
+                                            Texture_case11 = SDL_CreateTextureFromSurface(renderer, case11);
                                             SDL_FreeSurface(case11);
                                             
-                                            if (texture_case11 == NULL)
+                                            if (Texture_case11 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5330,14 +5330,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case11, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case11, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case11, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5361,10 +5361,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5377,14 +5377,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5402,10 +5402,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5418,14 +5418,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5443,10 +5443,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5459,14 +5459,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5484,10 +5484,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5500,14 +5500,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5525,10 +5525,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5541,14 +5541,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5566,10 +5566,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5582,14 +5582,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5607,10 +5607,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5623,14 +5623,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5648,10 +5648,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5664,14 +5664,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5689,10 +5689,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5705,14 +5705,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5730,10 +5730,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5746,14 +5746,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5771,10 +5771,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
+                                            Texture_case12 = SDL_CreateTextureFromSurface(renderer, case12);
                                             SDL_FreeSurface(case12);
                                             
-                                            if (texture_case12 == NULL)
+                                            if (Texture_case12 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5787,14 +5787,14 @@ int main(int argc, char **argv)
                                             BG.x = 608;
                                             BG.y = 416;
                                             
-                                            if (SDL_QueryTexture(texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case12, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case12, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case12, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5820,10 +5820,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5836,14 +5836,14 @@ int main(int argc, char **argv)
                                             BG.x = 30;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5861,10 +5861,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5877,14 +5877,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5902,10 +5902,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5918,14 +5918,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5943,10 +5943,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5959,14 +5959,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -5984,10 +5984,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6000,14 +6000,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6025,10 +6025,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6041,14 +6041,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6066,10 +6066,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6082,14 +6082,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6107,10 +6107,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6123,14 +6123,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6148,10 +6148,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6164,14 +6164,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6189,10 +6189,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6205,14 +6205,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6230,10 +6230,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
+                                            Texture_case13 = SDL_CreateTextureFromSurface(renderer, case13);
                                             SDL_FreeSurface(case13);
                                             
-                                            if (texture_case13 == NULL)
+                                            if (Texture_case13 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6246,14 +6246,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case13, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case13, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case13, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6277,10 +6277,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6293,14 +6293,14 @@ int main(int argc, char **argv)
                                             BG.x = 222;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6318,10 +6318,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6334,14 +6334,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6359,10 +6359,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6375,14 +6375,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6400,10 +6400,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6416,14 +6416,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6441,10 +6441,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6457,14 +6457,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6482,10 +6482,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6498,14 +6498,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6523,10 +6523,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6539,14 +6539,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6564,10 +6564,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6580,14 +6580,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6605,10 +6605,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6621,14 +6621,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6646,10 +6646,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6662,14 +6662,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6687,10 +6687,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
+                                            Texture_case14 = SDL_CreateTextureFromSurface(renderer, case14);
                                             SDL_FreeSurface(case14);
                                             
-                                            if (texture_case14 == NULL)
+                                            if (Texture_case14 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6703,14 +6703,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case14, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case14, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case14, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6734,10 +6734,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6750,14 +6750,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6775,10 +6775,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6791,14 +6791,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6816,10 +6816,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6832,14 +6832,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6857,10 +6857,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6873,14 +6873,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6898,10 +6898,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6914,14 +6914,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6939,10 +6939,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6955,14 +6955,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6980,10 +6980,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -6996,14 +6996,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7021,10 +7021,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7037,14 +7037,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7062,10 +7062,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7078,14 +7078,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7103,10 +7103,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7119,14 +7119,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7144,10 +7144,10 @@ int main(int argc, char **argv)
                                                 printf("Chargement");
                                             }
                                             
-                                            texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
+                                            Texture_case15 = SDL_CreateTextureFromSurface(renderer, case15);
                                             SDL_FreeSurface(case15);
                                             
-                                            if (texture_case15 == NULL)
+                                            if (Texture_case15 == NULL)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
@@ -7160,14 +7160,14 @@ int main(int argc, char **argv)
                                             BG.x = 416;
                                             BG.y = 608;
                                             
-                                            if (SDL_QueryTexture(texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
+                                            if (SDL_QueryTexture(Texture_case15, NULL, NULL, &BG.w, &BG.h) != 0)
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible de charger la texture");
                                             }
                                             
-                                            if ( SDL_RenderCopy(renderer, texture_case15, NULL, &BG) != 0 )
+                                            if ( SDL_RenderCopy(renderer, Texture_case15, NULL, &BG) != 0 )
                                             {
                                                 SDL_DestroyRenderer(renderer);
                                                 SDL_DestroyWindow(window);
