@@ -39,7 +39,7 @@ void InitialiserGrille(int Grille[N][N])
     Grille[i][j]=2;
 }
 
-int* AjouterCase (int Grille[N][N])
+void AjouterCase (int Grille[N][N])
 {
     int j;
     int i;
@@ -63,7 +63,6 @@ int* AjouterCase (int Grille[N][N])
             }
         }
     }
-    return Grille;
 }
 
 void DeplacerDroite(int Grille[N][N])
