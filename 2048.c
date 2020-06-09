@@ -15,28 +15,47 @@ void SDL_ExitWithError (const char *message)
 	SDL_Quit();
 	exit(EXIT_FAILURE);
 }
+void AfficherSDL(int Grille[N][N], int skin_2048)
+{
+
+}
 
 void InitialiserGrille(int Grille[N][N])
 {
     int i;
     int j;
-    for(i=0; i<N+1; i++)
+    for(i=0; i<N; i++)
     {
-        for(j=0; j<N+1: j++0)
+        for(j=0; j<N; j++)
         {
             Grille[i][j]=0;
         }
     }
+    i = rand()%4;
+    j = rand()%4;
+    Grille[i][j]=2;
+    i = rand()%4;
+    j = rand()%4;
+    Grille[i][j]=2;
 }
 
 void partie2048(int skin_2048, int continuer)
 {
     int Grille[N][N];
+    int fin=0;
     if (continuer==0)
     {
         InitialiserGrille(Grille);
     }
-
+    if (continuer==1)
+    {
+        //bah il faut faire une putain de procédure pour récupérer la sauvegarde enculé de merde
+    }
+    while(fin=0)
+    {
+        AfficherSDL(Grille[N][N], skin_2048);
+        
+    }
 }
 
 
@@ -66,7 +85,7 @@ int main(int argc, char **argv)
     SDL_Surface *image = NULL;
     SDL_Texture *texture = NULL;
     
-    image = SDL_LoadBMP("Menu.bmp");
+    image = SDL_LoadBMP("img/Menu.bmp");
     
     if (image == NULL)
     {
@@ -121,7 +140,7 @@ int main(int argc, char **argv)
        settings 4 Menu_settings 011 4x4 2P skin 2
        settings 5 Menu_settings 101 8x8    skin 2
     */
-    int skin _2048= 0;
+    int skin_2048= 0;
     /* skin_2048 = 0 <=> skin 1
       skin_2048 = 1 <=> skin 2
     */            
@@ -149,7 +168,7 @@ int main(int argc, char **argv)
                                 {
                                     //afficher image assombrie
                                     printf("C'EST LA CASE 1\n");
-                                    image = SDL_LoadBMP("Button1.bmp");
+                                    image = SDL_LoadBMP("img/Button1.bmp");
                                     
                                     if (image == NULL)
                                     {
@@ -189,14 +208,14 @@ int main(int argc, char **argv)
                                     }
                                     SDL_RenderPresent(renderer);
                                     //si il clique ça change de menu
-                                    affichage_menu = 2;
+                                    //affichage_menu = 2;
                                 }
 
                                 if (((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518)))
                                 {
                                     //afficher image assombrie
                                     printf("C'EST LA CASE 2\n");
-                                    image = SDL_LoadBMP("Button2.bmp");
+                                    image = SDL_LoadBMP("img/Button2.bmp");
 
                                     if (image == NULL)
                                     {
@@ -243,7 +262,7 @@ int main(int argc, char **argv)
                                     //afficher image assombrie
                                     printf("C'EST LA CASE 3\n");
 
-                                    image = SDL_LoadBMP("Button3.bmp");
+                                    image = SDL_LoadBMP("img/Button3.bmp");
 
                                     if (image == NULL)
                                     {
@@ -287,7 +306,7 @@ int main(int argc, char **argv)
                             }
                             else if (affichage_menu == 0)
                             {
-                                image = SDL_LoadBMP("Menu.bmp");
+                                image = SDL_LoadBMP("img/Menu.bmp");
 
                                 if (image == NULL)
                                 {
@@ -330,27 +349,27 @@ int main(int argc, char **argv)
                             {
                                 if (settings == 0)
                                 {
-                                    image = SDL_LoadBMP("000.bmp");
+                                    image = SDL_LoadBMP("img/000.bmp");
                                 }
                                 else if (settings == 1)
                                 {
-                                    image = SDL_LoadBMP("100.bmp");
+                                    image = SDL_LoadBMP("img/100.bmp");
                                 }
                                 else if (settings == 2)
                                 {
-                                    image = SDL_LoadBMP("001.bmp");
+                                    image = SDL_LoadBMP("img/001.bmp");
                                 }
                                 else if (settings == 3)
                                 {
-                                    image = SDL_LoadBMP("010.bmp");
+                                    image = SDL_LoadBMP("img/010.bmp");
                                 }
                                 else if (settings == 4)
                                 {
-                                    image = SDL_LoadBMP("011.bmp");
+                                    image = SDL_LoadBMP("img/011.bmp");
                                 }
                                 else if (settings == 5)
                                 {
-                                    image = SDL_LoadBMP("101.bmp");
+                                    image = SDL_LoadBMP("img/101.bmp");
                                 }
                                 if (image == NULL)
                                 {
@@ -404,27 +423,27 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                         }
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                         }
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                         }
 
                         if (image == NULL)
@@ -471,7 +490,7 @@ int main(int argc, char **argv)
                     {
                         
 
-                        partie2048();
+                        //partie2048();
                         continue;
                     }
                     
@@ -481,27 +500,27 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                         }
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                         }
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
                         }
                         else if (settings == 5)
@@ -554,33 +573,33 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                         }                        
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                         }
 
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                         }
                         if (image == NULL)
@@ -628,32 +647,32 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                         } 
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                         }                       
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                         }
                         if (image == NULL)
@@ -701,32 +720,32 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
                         }
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                         }                        
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                         }
 
@@ -775,38 +794,38 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                             skin_2048 = 0;
                         }                        
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                             skin_2048 = 0;
                         }
 
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("000.bmp");
+                            image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
                             skin_2048 = 0;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
                             skin_2048 = 0;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("010.bmp");
+                            image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
                             skin_2048 = 0;
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("100.bmp");
+                            image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                             skin_2048 = 0;
                         }
@@ -856,38 +875,38 @@ int main(int argc, char **argv)
                         affichage_menu = 1;
                         if (settings == 0)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                             skin_2048 = 1;
                         }                        
                         else if (settings == 1)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                             skin_2048 = 1;
                         }
 
                         else if (settings == 2)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                             skin_2048 = 1;
                         }
                         else if (settings == 3)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
                             skin_2048 = 1;
                         }
                         else if (settings == 4)
                         {
-                            image = SDL_LoadBMP("011.bmp");
+                            image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
                             skin_2048 = 1;
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("101.bmp");
+                            image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                             skin_2048 = 1;
                         }
@@ -935,7 +954,7 @@ int main(int argc, char **argv)
                     else if ((((event.button.x >= 20)&&(event.button.x <= 100))&&((event.button.y >= 80)&&(event.button.y <= 120)))&&(affichage_menu == 1))
                     {
                         affichage_menu = 0;
-                        image = SDL_LoadBMP("Menu.bmp");
+                        image = SDL_LoadBMP("img/Menu.bmp");
 
                         if (image == NULL)
                         {
