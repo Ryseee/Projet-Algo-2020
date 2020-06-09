@@ -58875,7 +58875,7 @@ int main(int argc, char **argv)
                                 }
     					    }
                 
-                case SDL_MOUSEMOTION : printf("%d / %d \n", event.motion.x, event.motion.y);
+                case SDL_MOUSEMOTION :
                 {
                             int X = event.motion.x;
                             int Y = event.motion.y;
