@@ -39,31 +39,6 @@ void InitialiserGrille(int Grille[N][N])
     Grille[i][j]=2;
 }
 
-void AjouterCase (int Grille[N][N])
-{
-    int j;
-    int i;
-    int k;
-    int pose = 0;
-    while (pose==0)
-    {
-        i = rand()%4;
-        j = rand()%4;
-        if(Grille[i][j]==0)
-        {
-            pose=1;
-            k = rand()%2;
-            if(k==1)
-            {
-                Grille[i][j]=2;
-            }
-            if(k==0)
-            {
-                Grille[i][j]=4;
-            }
-        }
-    }
-}
 
 void DeplacerDroite(int Grille[N][N])
 {
@@ -302,7 +277,6 @@ int main(int argc, char **argv)
     while (program_launched)
     {
     	SDL_Event event;
-
     	while (SDL_PollEvent(&event))
     	{
     		switch(event.type)
@@ -14948,7 +14922,28 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
-                                    AjouterCase(Grille);
+                                    int x;
+                                    int y;
+                                    int k;
+                                    int pose = 0;
+                                    while (pose==0)
+                                    {
+                                        x = rand()%4;
+                                        y = rand()%4;
+                                        if(Grille[x][y]==0)
+                                        {
+                                            pose=1;
+                                            k = rand()%2;
+                                            if(k==1)
+                                            {
+                                                Grille[x][y]=2;
+                                            }
+                                            if(k==0)
+                                            {
+                                                Grille[x][y]=4;
+                                            }
+                                        }
+                                    }
                                     continue;
                                 }
                             case SDLK_LEFT :
@@ -29589,7 +29584,28 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
-                                    AjouterCase(Grille);
+                                    int x;
+                                    int y;
+                                    int k;
+                                    int pose = 0;
+                                    while (pose==0)
+                                    {
+                                        x = rand()%4;
+                                        y = rand()%4;
+                                        if(Grille[x][y]==0)
+                                        {
+                                            pose=1;
+                                            k = rand()%2;
+                                            if(k==1)
+                                            {
+                                                Grille[x][y]=2;
+                                            }
+                                            if(k==0)
+                                            {
+                                                Grille[x][y]=4;
+                                            }
+                                        }
+                                    }
                                     continue;
                                 }
                             case SDLK_UP :
@@ -44230,7 +44246,28 @@ int main(int argc, char **argv)
                                         }
 
                                     }
-                                    AjouterCase(Grille);
+                                    int x;
+                                    int y;
+                                    int k;
+                                    int pose = 0;
+                                    while (pose==0)
+                                    {
+                                        x = rand()%4;
+                                        y = rand()%4;
+                                        if(Grille[x][y]==0)
+                                        {
+                                            pose=1;
+                                            k = rand()%2;
+                                            if(k==1)
+                                            {
+                                                Grille[x][y]=2;
+                                            }
+                                            if(k==0)
+                                            {
+                                                Grille[x][y]=4;
+                                            }
+                                        }
+                                    }
                                     continue;
                                 }
                             case SDLK_DOWN :
@@ -58870,7 +58907,28 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
-                                    AjouterCase(Grille);
+                                    int x;
+                                    int y;
+                                    int k;
+                                    int pose = 0;
+                                    while (pose==0)
+                                    {
+                                        x = rand()%4;
+                                        y = rand()%4;
+                                        if(Grille[x][y]==0)
+                                        {
+                                            pose=1;
+                                            k = rand()%2;
+                                            if(k==1)
+                                            {
+                                                Grille[x][y]=2;
+                                            }
+                                            if(k==0)
+                                            {
+                                                Grille[x][y]=4;
+                                            }
+                                        }
+                                    }
                                     continue;
                                 }
     					    }
@@ -59251,6 +59309,28 @@ int main(int argc, char **argv)
                             SDL_ExitWithError("Impossible d'afficher la texture");
                         }
                         SDL_RenderPresent(renderer);
+                        int x;
+                        int y;
+                        int k;
+                        int pose = 0;
+                        while (pose==0)
+                        {
+                            x = rand()%4;
+                            y = rand()%4;
+                            if(Grille[x][y]==0)
+                            {
+                                pose=1;
+                                k = rand()%2;
+                                if(k==1)
+                                {
+                                    Grille[x][y]=2;
+                                }
+                                if(k==0)
+                                {
+                                    Grille[x][y]=4;
+                                }
+                            }
+                        }
                         continue;
                     }
                     
@@ -59766,7 +59846,6 @@ int main(int argc, char **argv)
     	}
     }
     
-    	
     SDL_Delay(500);
     SDL_DestroyTexture(Texture_case1);
     SDL_DestroyTexture(Texture_case2);
