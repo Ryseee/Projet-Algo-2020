@@ -26,7 +26,7 @@ int main(int argc, char **argv)
         SDL_ExitWithError("Initialisation SDL ");
     }
 	
-    // Execution du Programme
+    // EXECUTION DU PROGRAMME 
     
     // Création de la fenêtre + rendu
     
