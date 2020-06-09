@@ -7629,9 +7629,9 @@ int main(int argc, char **argv)
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible d'afficher la texture");
                                             }
-                                        
+                                        }
+                                        continue;  
                                     }
-
                                     else if (skin_2048 == 1)
                                     {
                                         /* Case 1 */
@@ -14947,9 +14947,7 @@ int main(int argc, char **argv)
                                                 SDL_ExitWithError("Impossible d'afficher la texture");
                                             }
                                         }
-
                                     }
-                                    continue;
                                 }
                             case SDLK_LEFT :
                                 if (affichage_menu == 2)
@@ -22271,8 +22269,8 @@ int main(int argc, char **argv)
                                                 SDL_ExitWithError("Impossible d'afficher la texture");
                                             }
                                         
+                                        }  
                                     }
-
                                     else if (skin_2048 == 1)
                                     {
                                         /* Case 1 */
@@ -36910,9 +36908,8 @@ int main(int argc, char **argv)
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible d'afficher la texture");
                                             }
-                                        
+                                        }
                                     }
-
                                     else if (skin_2048 == 1)
                                     {
                                         /* Case 1 */
@@ -51551,9 +51548,8 @@ int main(int argc, char **argv)
                                                 SDL_DestroyWindow(window);
                                                 SDL_ExitWithError("Impossible d'afficher la texture");
                                             }
-                                        
+                                        }
                                     }
-
                                     else if (skin_2048 == 1)
                                     {
                                         /* Case 1 */
@@ -59762,10 +59758,25 @@ int main(int argc, char **argv)
     		}
     	}
     }
-    }
+    
     	
     SDL_Delay(500);
-    
+    SDL_DestroyTexture(Texture_case1);
+    SDL_DestroyTexture(Texture_case2);
+    SDL_DestroyTexture(Texture_case3);
+    SDL_DestroyTexture(Texture_case4);
+    SDL_DestroyTexture(Texture_case5);
+    SDL_DestroyTexture(Texture_case6);
+    SDL_DestroyTexture(Texture_case7);
+    SDL_DestroyTexture(Texture_case8);
+    SDL_DestroyTexture(Texture_case9);
+    SDL_DestroyTexture(Texture_case10);
+    SDL_DestroyTexture(Texture_case11);
+    SDL_DestroyTexture(Texture_case12);
+    SDL_DestroyTexture(Texture_case13);
+    SDL_DestroyTexture(Texture_case14);
+    SDL_DestroyTexture(Texture_case15);
+    SDL_DestroyTexture(Texture_case16);
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
