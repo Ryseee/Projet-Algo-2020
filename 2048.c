@@ -14948,6 +14948,8 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
+                                    AjouterCase(Grille);
+                                    continue;
                                 }
                             case SDLK_LEFT :
                                 if (affichage_menu == 2)
@@ -29587,6 +29589,7 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
+                                    AjouterCase(Grille);
                                     continue;
                                 }
                             case SDLK_UP :
@@ -44227,6 +44230,7 @@ int main(int argc, char **argv)
                                         }
 
                                     }
+                                    AjouterCase(Grille);
                                     continue;
                                 }
                             case SDLK_DOWN :
@@ -58866,6 +58870,7 @@ int main(int argc, char **argv)
                                             }
                                         }
                                     }
+                                    AjouterCase(Grille);
                                     continue;
                                 }
     					    }
