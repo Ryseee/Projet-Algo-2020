@@ -83,6 +83,10 @@ int main(int argc, char **argv)
 
     SDL_RenderPresent(renderer);
     int affichage_menu = 0;
+    /* affichage_menu = 0 <=> Menu
+       affichage_menu = 1 <=> Settings
+       affichage_menu = 2 <=> Start
+    */
     int settings = 0;
     /* settings 0 Menu_settings 000 4x4 1P skin 1
        settings 1 Menu_settings 100 8x8    skin 1
@@ -155,6 +159,7 @@ int main(int argc, char **argv)
                                     }
                                     SDL_RenderPresent(renderer);
                                     //si il clique ça change de menu
+                                    affichage_menu = 2;
                                 }
 
                                 if (((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518)))
