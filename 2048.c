@@ -4,6 +4,7 @@
 
 #define WindowWidth 800
 #define WindowHeight 800
+#define N 4
 
 // gcc 2048.c -o 2048 $(sdl2-config --cflags --libs)  // COMMANDE DE COMPILATION
 // ./2048                                             // COMMANDE D'EXECUTION
@@ -14,6 +15,31 @@ void SDL_ExitWithError (const char *message)
 	SDL_Quit();
 	exit(EXIT_FAILURE);
 }
+
+void InitialiserGrille(int Grille[N][N])
+{
+    int i;
+    int j;
+    for(i=0; i<N+1; i++)
+    {
+        for(j=0; j<N+1: j++0)
+        {
+            Grille[i][j]=0;
+        }
+    }
+}
+
+void partie2048(int skin_2048, int continuer)
+{
+    int Grille[N][N];
+    if (continuer==0)
+    {
+        InitialiserGrille(Grille);
+    }
+
+}
+
+
 
 int main(int argc, char **argv)
 {
@@ -94,7 +120,11 @@ int main(int argc, char **argv)
        settings 3 Menu_settings 010 4x4 2P skin 1
        settings 4 Menu_settings 011 4x4 2P skin 2
        settings 5 Menu_settings 101 8x8    skin 2
-    */             
+    */
+    int skin _2048= 0;
+    /* skin_2048 = 0 <=> skin 1
+      skin_2048 = 1 <=> skin 2
+    */            
     while (program_launched)
     {
     	SDL_Event event;
@@ -439,6 +469,9 @@ int main(int argc, char **argv)
                     /* Cas où l'utilisateur clic sur "START" dans MENU*/
                     else if ((((event.button.x >= 200)&&(event.button.x <= 600))&&((event.button.y >= 268)&&(event.button.y<= 368)))&&(affichage_menu==0))
                     {
+                        
+
+                        partie2048();
                         continue;
                     }
                     
@@ -744,32 +777,38 @@ int main(int argc, char **argv)
                         {
                             image = SDL_LoadBMP("000.bmp");
                             settings = 0;
+                            skin_2048 = 0;
                         }                        
                         else if (settings == 1)
                         {
                             image = SDL_LoadBMP("100.bmp");
                             settings = 1;
+                            skin_2048 = 0;
                         }
 
                         else if (settings == 2)
                         {
                             image = SDL_LoadBMP("000.bmp");
                             settings = 0;
+                            skin_2048 = 0;
                         }
                         else if (settings == 3)
                         {
                             image = SDL_LoadBMP("010.bmp");
                             settings = 3;
+                            skin_2048 = 0;
                         }
                         else if (settings == 4)
                         {
                             image = SDL_LoadBMP("010.bmp");
                             settings = 3;
+                            skin_2048 = 0;
                         }
                         else if (settings == 5)
                         {
                             image = SDL_LoadBMP("100.bmp");
                             settings = 1;
+                            skin_2048 = 0;
                         }
 
                         if (image == NULL)
@@ -819,32 +858,38 @@ int main(int argc, char **argv)
                         {
                             image = SDL_LoadBMP("001.bmp");
                             settings = 2;
+                            skin_2048 = 1;
                         }                        
                         else if (settings == 1)
                         {
                             image = SDL_LoadBMP("101.bmp");
                             settings = 5;
+                            skin_2048 = 1;
                         }
 
                         else if (settings == 2)
                         {
                             image = SDL_LoadBMP("001.bmp");
                             settings = 2;
+                            skin_2048 = 1;
                         }
                         else if (settings == 3)
                         {
                             image = SDL_LoadBMP("011.bmp");
                             settings = 4;
+                            skin_2048 = 1;
                         }
                         else if (settings == 4)
                         {
                             image = SDL_LoadBMP("011.bmp");
                             settings = 4;
+                            skin_2048 = 1;
                         }
                         else if (settings == 5)
                         {
                             image = SDL_LoadBMP("101.bmp");
                             settings = 5;
+                            skin_2048 = 1;
                         }
 
                         if (image == NULL)
