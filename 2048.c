@@ -1,4 +1,5 @@
 #include <SDL.h>
+#include <SDL_ttf.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -10,6 +11,7 @@
 
 // gcc 2048.c -o 2048 $(sdl2-config --cflags --libs)  // COMMANDE DE COMPILATION
 // ./2048                                             // COMMANDE D'EXECUTION
+
 
 void SDL_ExitWithError (const char *message)
 {
@@ -237,7 +239,12 @@ int main(int argc, char **argv)
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;
 
-
+    if(TTF_Init()==-1) 
+    {
+        printf("TTF_Init: %s\n", TTF_GetError());
+        exit(2);
+    }
+    
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {
         SDL_ExitWithError("Initialisation SDL ");
@@ -1332,6 +1339,7 @@ int main(int argc, char **argv)
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
+    TTF_Quit();
     SDL_Quit();
     
     return EXIT_SUCCESS;
