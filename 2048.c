@@ -75,18 +75,19 @@ void DeplacerDroite(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (Grille[i][j]==Grille[i][j+1])
+            if(j+1<4)
             {
-                Grille[i][j+1]+=Grille[i][j];
-                Grille[i][j] = 0;
+                if (Grille[i][j]==Grille[i][j+1])
+                {
+                    Grille[i][j+1] = 2*Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i][j+1]==0)
+                {
+                    Grille[i][j+1]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
             }
-            else if(Grille[i][j+1]==0)
-            {
-                Grille[i][j+1]=Grille[i][j];
-                Grille[i][j]=0;
-            }
-            else 
-            {}
         }
     }
 }
@@ -99,18 +100,19 @@ void DeplacerGauche(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (Grille[i][3-j]==Grille[i][2-j])
+            if (j+1<4)
             {
-                Grille[i][2-j]+=Grille[i][3-j];
-                Grille[i][3-j] = 0;
+                if (Grille[i][3-j]==Grille[i][2-j])
+                {
+                    Grille[i][2-j]+=Grille[i][3-j];
+                    Grille[i][3-j] = 0;
+                }
+                else if(Grille[i][2-j]==0)
+                {
+                   Grille[i][2-j]=Grille[i][3-j];
+                    Grille[i][3-j]=0;
+                }
             }
-            else if(Grille[i][2-j]==0)
-            {
-                Grille[i][2-j]=Grille[i][3-j];
-                Grille[i][3-j]=0;
-            }
-            else 
-            {}
         }
     }
 }
@@ -123,18 +125,19 @@ void DeplacerBas(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (Grille[j][i]==Grille[j][i+1])
+            if (i +1 < 4)
             {
-                Grille[j][i+1]+=Grille[j][i];
-                Grille[j][i] = 0;
+                if (Grille[i][j]==Grille[i+1][j])
+                {
+                    Grille[i+1][j]+=Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i+1][j]==0)
+                {
+                    Grille[i+1][j]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
             }
-            else if(Grille[j][i+1]==0)
-            {
-                Grille[j][i+1]=Grille[j][i];
-                Grille[j][i]=0;
-            }
-            else 
-            {}
         }
     }
 }
@@ -147,17 +150,20 @@ void DeplacerHaut(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (Grille[j][3-i]==Grille[j][2-i])
+            if (j+1<4)
             {
-                Grille[j][2-i]+=Grille[j][3-i];
-                Grille[j][3-i] = 0;
+                if (Grille[3-i][j]==Grille[2-i][j])
+                {
+                    Grille[2-i][j]+=Grille[3-i][j];
+                    Grille[i][3-j] = 0;
+                }
+                else if(Grille[i][2-j]==0)
+                {
+                    Grille[i][2-j]=Grille[i][3-j];
+                    Grille[3-i][j]=0;
+                }
             }
-            else if(Grille[j][2-i]==0)
-            {
-                Grille[j][2-i]=Grille[j][3-i];
-                Grille[j][3-i]=0;
-            }
-            else 
+            else    
             {}
         }
     }
@@ -179,7 +185,7 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
             {
                 switch (Grille[i][j])
                 {
-                    default : r = 255; g = 255; b = 255; break;
+                    default : r = 204; g = 192; b = 178; break;
                     case 2 : r = 238; g = 228; b = 218; break;
                     case 4 : r = 237; g = 224; b = 200; break;
                     case 8 : r = 242; g = 177; b = 121; break;
@@ -325,10 +331,10 @@ int main(int argc, char **argv)
                                             printf("| %d " , Grille[i][j]);
                                         }
                                         printf("|\n");
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        AjouterRandom(Grille);
                                     }
-                                    printf("\n");
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    SDL_RenderPresent(renderer);     
+                                    printf("\n");    
                                     continue;
                                 }
                             case SDLK_q :
@@ -342,10 +348,10 @@ int main(int argc, char **argv)
                                             printf("| %d " , Grille[i][j]);
                                         }
                                         printf("|\n");
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        AjouterRandom(Grille);
                                     }
                                     printf("\n");
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    SDL_RenderPresent(renderer);
                                     continue;
                                 }
                             case SDLK_z :
@@ -359,10 +365,10 @@ int main(int argc, char **argv)
                                             printf("| %d " , Grille[i][j]);
                                         }
                                         printf("|\n");
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        AjouterRandom(Grille);
                                     }
                                     printf("\n");
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    SDL_RenderPresent(renderer);
                                     continue;
                                 }    
                             case SDLK_s :
@@ -376,10 +382,11 @@ int main(int argc, char **argv)
                                             printf("| %d " , Grille[i][j]);
                                         }
                                         printf("|\n");
+                                        affichageJeu(Grille, skin_2048, renderer);
                                     }
                                     printf("\n");
                                     affichageJeu(Grille, skin_2048, renderer);
-                                    SDL_RenderPresent(renderer);
+                                    AjouterRandom(Grille);
                                     continue;
                                 }    
                             }
@@ -1294,7 +1301,12 @@ int main(int argc, char **argv)
                 case SDL_QUIT : {program_launched = SDL_FALSE; break;}
     			default : {break;}		
     		}
-    	}
+    	    if (affichage_menu == 2)
+            {
+                affichageJeu(Grille, skin_2048, renderer);
+                SDL_RenderPresent(renderer);
+            }
+        }
     }
     
     SDL_Delay(500);
