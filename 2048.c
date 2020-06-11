@@ -21,7 +21,24 @@ void AfficherSDL(int Grille[N][N], int skin_2048)
 {
 
 }
-
+SDL_bool Victoire (int Grille[N][N], SDL_bool program_launched)
+{
+    int i;
+    int j; 
+    for (i=0; i<N; i++)
+    {
+        for (j=0; j<N; j++)
+        {
+            if (Grille[i][j]==2048)
+            {
+                printf("Victoire !!!\n");
+                program_launched = SDL_FALSE;
+            }
+        }
+    }
+    
+    return program_launched;
+}
 void InitialiserGrille(int Grille[N][N])
 {
     int i;
@@ -150,21 +167,19 @@ void DeplacerHaut(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (j+1<4)
+            if (3-i >= 0)
             {
                 if (Grille[3-i][j]==Grille[2-i][j])
                 {
                     Grille[2-i][j]+=Grille[3-i][j];
-                    Grille[i][3-j] = 0;
+                    Grille[3-i][j] = 0;
                 }
-                else if(Grille[i][2-j]==0)
+                else if(Grille[2-i][j]==0)
                 {
-                    Grille[i][2-j]=Grille[i][3-j];
+                    Grille[2-i][j]=Grille[3-i][j];
                     Grille[3-i][j]=0;
                 }
             }
-            else    
-            {}
         }
     }
 }
@@ -324,70 +339,65 @@ int main(int argc, char **argv)
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerDroite(Grille);
-                                    for (i=0; i<N; i++)
+                                    affichageJeu(Grille, skin_2048, renderer);
+                                    AjouterRandom(Grille);
+                                    program_launched = Victoire(Grille, program_launched);
+                                    if (program_launched == SDL_FALSE)
                                     {
-                                        for (j=0; j<N; j++)
-                                        {
-                                            printf("| %d " , Grille[i][j]);
-                                        }
-                                        printf("|\n");
-                                        affichageJeu(Grille, skin_2048, renderer);
-                                        AjouterRandom(Grille);
+                                        break;
                                     }
-                                    printf("\n");    
-                                    continue;
+                                    else
+                                    {
+                                        continue;
+                                    }
                                 }
                             case SDLK_q :
-                                if (affichage_menu == 2)
+                                if (affichage_menu == 2)    
                                 {
                                     DeplacerGauche(Grille);
-                                    for (i=0; i<N; i++)
+                                    affichageJeu(Grille, skin_2048, renderer);
+                                    AjouterRandom(Grille);;
+                                    program_launched = Victoire(Grille, program_launched);
+                                    if (program_launched == SDL_FALSE)
                                     {
-                                        for (j=0; j<N; j++)
-                                        {
-                                            printf("| %d " , Grille[i][j]);
-                                        }
-                                        printf("|\n");
-                                        affichageJeu(Grille, skin_2048, renderer);
-                                        AjouterRandom(Grille);
+                                        break;
                                     }
-                                    printf("\n");
-                                    continue;
+                                    else
+                                    {
+                                        continue;
+                                    }
                                 }
                             case SDLK_z :
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerHaut(Grille);
-                                    for (i=0; i<N; i++)
+                                    affichageJeu(Grille, skin_2048, renderer);
+                                    AjouterRandom(Grille);
+                                    program_launched = Victoire(Grille, program_launched);
+                                    if (program_launched == SDL_FALSE)
                                     {
-                                        for (j=0; j<N; j++)
-                                        {
-                                            printf("| %d " , Grille[i][j]);
-                                        }
-                                        printf("|\n");
-                                        affichageJeu(Grille, skin_2048, renderer);
-                                        AjouterRandom(Grille);
+                                        break;
                                     }
-                                    printf("\n");
-                                    continue;
+                                    else
+                                    {
+                                        continue;
+                                    }
                                 }    
                             case SDLK_s :
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerBas(Grille);
-                                    for (i=0; i<N; i++)
-                                    {
-                                        for (j=0; j<N; j++)
-                                        {
-                                            printf("| %d " , Grille[i][j]);
-                                        }
-                                        printf("|\n");
-                                        affichageJeu(Grille, skin_2048, renderer);
-                                    }
-                                    printf("\n");
                                     affichageJeu(Grille, skin_2048, renderer);
                                     AjouterRandom(Grille);
-                                    continue;
+                                    program_launched = Victoire(Grille, program_launched);
+                                    if (program_launched == SDL_FALSE)
+                                    {
+                                        break;
+                                    }
+                                    else
+                                    {
+                                        continue;
+                                    }
                                 }    
                             }
                 
@@ -1303,6 +1313,15 @@ int main(int argc, char **argv)
     		}
     	    if (affichage_menu == 2)
             {
+                for (i=0; i<N; i++)
+                {
+                    for (j=0; j<N; j++)
+                    {
+                        printf("| %d " , Grille[i][j]);
+                    }
+                    printf("|\n");
+                }
+                printf("\n");
                 affichageJeu(Grille, skin_2048, renderer);
                 SDL_RenderPresent(renderer);
             }
