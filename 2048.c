@@ -179,7 +179,10 @@ int ConditionFIN(int Grille[N][N])
         {
             if (((Grille[i][j]!=Grille[i+1][j])&&(Grille[i][j]!=Grille[i-1][j]))&&((Grille[i][j]!=Grille[i][j+1])&&(Grille[i][j]!=Grille[i][j+1])))
             {
-                condition += 1;
+                if (Grille[i][j]!=0)
+                {
+                    condition += 1;
+                }
             }
             if (Grille[i][j]==2048)
             {
@@ -238,8 +241,8 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
                     case 2 : r = 255; g = 255; b = 0; break;
                     case 4 : r = 0; g = 255; b = 0; break;
                     case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 100; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 16 : r = 0; g = 0; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 125; break;
                     case 64 : r = 100; g = 0; b = 255; break;
                     case 128 : r = 255; g = 0; b = 100; break;
                     case 256 : r = 255; g = 0; b = 0; break;
