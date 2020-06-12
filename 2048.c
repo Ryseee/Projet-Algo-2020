@@ -582,7 +582,7 @@ int main(int argc, char **argv)
                                     {
                                         for (j=0; j<N; j++)
                                         {
-                                            printf("| %d " , GrilleJ2[i][j]);
+                                            printf("|  %d  " , GrilleJ2[i][j]);
                                         }
                                         printf("|\n");
                                     }
@@ -631,7 +631,7 @@ int main(int argc, char **argv)
                                     {
                                         for (j=0; j<N; j++)
                                         {
-                                            printf("| %d " , GrilleJ2[i][j]);
+                                            printf("|  %d  " , GrilleJ2[i][j]);
                                         }
                                         printf("|\n");
                                     }
@@ -679,7 +679,7 @@ int main(int argc, char **argv)
                                     {
                                         for (j=0; j<N; j++)
                                         {
-                                            printf("| %d " , GrilleJ2[i][j]);
+                                            printf("|  %d  " , GrilleJ2[i][j]);
                                         }
                                         printf("|\n");
                                     }
@@ -726,7 +726,7 @@ int main(int argc, char **argv)
                                     {
                                         for (j=0; j<N; j++)
                                         {
-                                            printf("| %d " , GrilleJ2[i][j]);
+                                            printf("|  %d  " , GrilleJ2[i][j]);
                                         }
                                         printf("|\n");
                                     }
@@ -1701,6 +1701,18 @@ int main(int argc, char **argv)
             {
                 affichageJeu(Grille, skin_2048, renderer);
                 SDL_RenderPresent(renderer);
+                if (joueur == 2)
+                {
+
+                    for (i=0; i<N; i++)
+                    {
+                        for (j=0; j<N; j++)
+                        {
+                            printf("|  %d  " , GrilleJ2[i][j]);
+                        }
+                            printf("|\n");
+                    }
+                }
             }
         }
     }
