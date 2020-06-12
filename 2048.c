@@ -1611,7 +1611,7 @@ int main(int argc, char **argv)
                             }
                             if (skin_2048 == 1)
                             {
-                                image = SDL_LoadBMP("img/gridblack8.bmp");
+                                image = SDL_LoadBMP("img/grid8black.bmp");
                             }        
                             if (image == NULL)
                             {
