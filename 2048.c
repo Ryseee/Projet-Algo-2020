@@ -228,7 +228,7 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
                     case 128 : r = 255; g = 0; b = 100; break;
                     case 256 : r = 255; g = 0; b = 0; break;
                     case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 100; g = 255; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
                     case 2048 : r = 0; g = 0; b = 0; break;
                 }
                 
@@ -241,13 +241,13 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
                     case 2 : r = 255; g = 255; b = 0; break;
                     case 4 : r = 0; g = 255; b = 0; break;
                     case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 0; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 125; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
                     case 64 : r = 100; g = 0; b = 255; break;
                     case 128 : r = 255; g = 0; b = 100; break;
                     case 256 : r = 255; g = 0; b = 0; break;
                     case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 100; g = 255; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
                     case 2048 : r = 255; g = 255; b = 255; break;
                 }
             }
