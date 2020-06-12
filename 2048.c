@@ -21,277 +21,6 @@ void SDL_ExitWithError (const char *message)
 	exit(EXIT_FAILURE);
 }
 
-void InitialiserGrille8(int Grille[M][M])
-{
-    int i;
-    int j;
-    for(i=0; i<M; i++)
-    {
-        for(j=0; j<M; j++)
-        {
-            Grille[i][j]=0;
-        }
-    }
-    i = rand()%8;
-    j = rand()%8;
-    Grille[i][j]=2;
-    i = rand()%8;
-    j = rand()%8;
-    Grille[i][j]=2;
-}
-void AjouterRandom8(int Grille[M][M])
-{
-    int i;
-    int j;
-    int i_init;
-    int j_init;
-    int premier=1;
-    int bon = 0;
-    int c2ou4 = 0;
-    i = rand()%8;
-    j = rand()%8;
-    i_init = i;
-    j_init = j;
-
-    while(bon==0)
-    {
-        if (((i_init == i)&&(j_init == j))&&(premier == 0))
-        {
-            break;
-        }
-        else
-        {
-            if(Grille[i][j]==0)
-            {
-                bon=1;
-                c2ou4= rand()%2;
-                if(c2ou4==0)
-                {
-                    Grille[i][j]=2;
-                }
-                if(c2ou4==1)
-                {
-                    Grille[i][j]=4;
-                }
-            }
-            else
-            {
-                if (j!=7)
-                {
-                    j += 1;
-                }
-                else if (j == 7)
-                {
-                    if (i!= 7)
-                    {
-                        i +=1;
-                        j=0;
-                    }
-                    else
-                    {
-                        i=0;
-                        j=0;
-                    }
-                    
-                }
-
-            }
-            premier = 0;
-        }
-    }
-}
-void DeplacerDroite8(int Grille[M][M])
-{
-    int i;
-    int j;
-    for(i=0; i<M; i++)
-    {
-        for(j=0; j<M; j++)
-        {
-            if (j<7)
-            {    
-                if (Grille[i][j]==Grille[i][j+1])
-                {
-                    Grille[i][j+1] = 2*Grille[i][j];
-                    Grille[i][j] = 0;
-                }
-                else if(Grille[i][j+1]==0)
-                {
-                    Grille[i][j+1]=Grille[i][j];
-                    Grille[i][j]=0;
-                }
-            }
-        }
-    }
-}
-void DeplacerGauche8(int Grille[M][M])
-{
-    int i;
-    int j;
-    for(i=0; i<M; i++)
-    {
-        for(j=0; j<M; j++)
-        {
-            if (6-j>=0)   
-            { 
-                if (Grille[i][7-j]==Grille[i][6-j])
-                {
-                    Grille[i][6-j]+=Grille[i][7-j];
-                    Grille[i][7-j] = 0;
-                }
-                else if(Grille[i][6-j]==0)
-                {
-                    Grille[i][6-j]=Grille[i][7-j];
-                    Grille[i][7-j]=0;
-                }
-            }
-        }
-    }
-}
-void DeplacerBas8(int Grille[M][M])
-{
-    int i;
-    int j;
-    for(i=0; i<M; i++)
-    {
-        for(j=0; j<M; j++)
-        {
-            if (i < 7   )
-            {
-                if (Grille[i][j]==Grille[i+1][j])
-                {
-                    Grille[i+1][j]+=Grille[i][j];
-                    Grille[i][j] = 0;
-                }
-                else if(Grille[i+1][j]==0)
-                {
-                    Grille[i+1][j]=Grille[i][j];
-                    Grille[i][j]=0;
-                }
-            }
-        }
-    }
-}
-void DeplacerHaut8(int Grille[M][M])
-{
-    int i;
-    int j;
-    for(i=0; i<M; i++)
-    {
-        for(j=0; j<M; j++)
-        {
-            if (6-i >= 0)
-            {
-                if (Grille[7-i][j]==Grille[6-i][j])
-                {
-                    Grille[6-i][j]+=Grille[7-i][j];
-                    Grille[7-i][j] = 0;
-                }
-                else if(Grille[6-i][j]==0)
-                {
-                    Grille[6-i][j]=Grille[7-i][j];
-                    Grille[7-i][j]=0;
-                }
-            }
-        }
-    }
-}
-int ConditionFIN8(int Grille[M][M])
-{
-    int i;
-    int j;
-    int condition =1;
-    int FIN=0;
-
-    for (i=0; i<M; i++)
-    {
-        for (j=0; j<M; j++)
-        {
-            if (((Grille[i][j]!=Grille[i+1][j])&&(Grille[i][j]!=Grille[i-1][j]))&&((Grille[i][j]!=Grille[i][j+1])&&(Grille[i][j]!=Grille[i][j+1])))
-            {
-                if (Grille[i][j]!=0)
-                {
-                    condition += 1;
-                }
-            }
-            if (Grille[i][j]==2048)
-            {
-                printf("Victoire !!!\n");
-                FIN = 2;
-            }
-        }
-    }
-    if (condition == 64)
-    {
-        FIN = 1;
-    }
-
-    return FIN;
-}
-void affichageJeu8(int Grille[M][M], int skin_2048, SDL_Renderer *renderer)
-{
-    int i;
-    int j;
-    SDL_Rect Case;
-
-
-    int r;
-    int g; 
-    int b; 
-    int a = 255; 
-    for (i=0; i<M; i++)
-    {
-        for (j=0; j<M; j++)
-        {
-            
-            if (skin_2048 == 0)
-            {
-                switch (Grille[i][j])
-                {
-                    default : r = 255; g = 255; b = 255;break;
-                    case 2 : r = 255; g = 255; b = 0; break;
-                    case 4 : r = 0; g = 255; b = 0; break;
-                    case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 100; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 255; break;
-                    case 64 : r = 100; g = 0; b = 255; break;
-                    case 128 : r = 255; g = 0; b = 100; break;
-                    case 256 : r = 255; g = 0; b = 0; break;
-                    case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 125; g = 125; b = 125; break;
-                    case 2048 : r = 0; g = 0; b = 0; break;
-                }
-                
-            }
-            else 
-            {
-                switch (Grille[i][j])
-                {
-                    default : r = 0; g = 0; b = 0;break;
-                    case 2 : r = 255; g = 255; b = 0; break;
-                    case 4 : r = 0; g = 255; b = 0; break;
-                    case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 100; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 255; break;
-                    case 64 : r = 100; g = 0; b = 255; break;
-                    case 128 : r = 255; g = 0; b = 100; break;
-                    case 256 : r = 255; g = 0; b = 0; break;
-                    case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 125; g = 125; b = 125; break;
-                    case 2048 : r = 255; g = 255; b = 255; break;
-                }
-            }
-            Case.w = CaseWidth8;
-            Case.h = CaseHeight8;
-            Case.x = 14 + (CaseWidth8+15)*j;
-            Case.y = 14 + (CaseHeight8+15)*i;
-        
-            
-            SDL_SetRenderDrawColor(renderer, r, g, b, a);
-            SDL_RenderFillRect(renderer, &Case);
-        }
-    }
-}
 
 void InitialiserGrille(int Grille[N][N])
 {
@@ -561,6 +290,278 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
             Case.h = CaseHeight;
             Case.x = 30 + (CaseWidth+30)*j;
             Case.y = 30 + (CaseHeight+30)*i;
+        
+            
+            SDL_SetRenderDrawColor(renderer, r, g, b, a);
+            SDL_RenderFillRect(renderer, &Case);
+        }
+    }
+}
+
+void InitialiserGrille8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            Grille[i][j]=0;
+        }
+    }
+    i = rand()%8;
+    j = rand()%8;
+    Grille[i][j]=2;
+    i = rand()%8;
+    j = rand()%8;
+    Grille[i][j]=2;
+}
+void AjouterRandom8(int Grille[M][M])
+{
+    int i;
+    int j;
+    int i_init;
+    int j_init;
+    int premier=1;
+    int bon = 0;
+    int c2ou4 = 0;
+    i = rand()%8;
+    j = rand()%8;
+    i_init = i;
+    j_init = j;
+
+    while(bon==0)
+    {
+        if (((i_init == i)&&(j_init == j))&&(premier == 0))
+        {
+            break;
+        }
+        else
+        {
+            if(Grille[i][j]==0)
+            {
+                bon=1;
+                c2ou4= rand()%2;
+                if(c2ou4==0)
+                {
+                    Grille[i][j]=2;
+                }
+                if(c2ou4==1)
+                {
+                    Grille[i][j]=4;
+                }
+            }
+            else
+            {
+                if (j!=7)
+                {
+                    j += 1;
+                }
+                else if (j == 7)
+                {
+                    if (i!= 7)
+                    {
+                        i +=1;
+                        j=0;
+                    }
+                    else
+                    {
+                        i=0;
+                        j=0;
+                    }
+                    
+                }
+
+            }
+            premier = 0;
+        }
+    }
+}
+void DeplacerDroite8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (j<7)
+            {    
+                if (Grille[i][j]==Grille[i][j+1])
+                {
+                    Grille[i][j+1] = 2*Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i][j+1]==0)
+                {
+                    Grille[i][j+1]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerGauche8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (6-j>=0)   
+            { 
+                if (Grille[i][7-j]==Grille[i][6-j])
+                {
+                    Grille[i][6-j]+=Grille[i][7-j];
+                    Grille[i][7-j] = 0;
+                }
+                else if(Grille[i][6-j]==0)
+                {
+                    Grille[i][6-j]=Grille[i][7-j];
+                    Grille[i][7-j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerBas8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (i < 7   )
+            {
+                if (Grille[i][j]==Grille[i+1][j])
+                {
+                    Grille[i+1][j]+=Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i+1][j]==0)
+                {
+                    Grille[i+1][j]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerHaut8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (6-i >= 0)
+            {
+                if (Grille[7-i][j]==Grille[6-i][j])
+                {
+                    Grille[6-i][j]+=Grille[7-i][j];
+                    Grille[7-i][j] = 0;
+                }
+                else if(Grille[6-i][j]==0)
+                {
+                    Grille[6-i][j]=Grille[7-i][j];
+                    Grille[7-i][j]=0;
+                }
+            }
+        }
+    }
+}
+int ConditionFIN8(int Grille[M][M])
+{
+    int i;
+    int j;
+    int condition =1;
+    int FIN=0;
+
+    for (i=0; i<M; i++)
+    {
+        for (j=0; j<M; j++)
+        {
+            if (((Grille[i][j]!=Grille[i+1][j])&&(Grille[i][j]!=Grille[i-1][j]))&&((Grille[i][j]!=Grille[i][j+1])&&(Grille[i][j]!=Grille[i][j+1])))
+            {
+                if (Grille[i][j]!=0)
+                {
+                    condition += 1;
+                }
+            }
+            if (Grille[i][j]==2048)
+            {
+                printf("Victoire !!!\n");
+                FIN = 2;
+            }
+        }
+    }
+    if (condition == 64)
+    {
+        FIN = 1;
+    }
+
+    return FIN;
+}
+void affichageJeu8(int Grille[M][M], int skin_2048, SDL_Renderer *renderer)
+{
+    int i;
+    int j;
+    SDL_Rect Case;
+
+
+    int r;
+    int g; 
+    int b; 
+    int a = 255; 
+    for (i=0; i<M; i++)
+    {
+        for (j=0; j<M; j++)
+        {
+            
+            if (skin_2048 == 0)
+            {
+                switch (Grille[i][j])
+                {
+                    default : r = 255; g = 255; b = 255;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
+                    case 2048 : r = 0; g = 0; b = 0; break;
+                }
+                
+            }
+            else 
+            {
+                switch (Grille[i][j])
+                {
+                    default : r = 0; g = 0; b = 0;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
+                    case 2048 : r = 255; g = 255; b = 255; break;
+                }
+            }
+            Case.w = CaseWidth8;
+            Case.h = CaseHeight8;
+            Case.x = 14 + (CaseWidth8+15)*j;
+            Case.y = 14 + (CaseHeight8+15)*i;
         
             
             SDL_SetRenderDrawColor(renderer, r, g, b, a);
