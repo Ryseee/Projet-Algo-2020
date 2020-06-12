@@ -1,5 +1,4 @@
-#include <SDL.h>
-#include <SDL_ttf.h>
+#include <SDL2/SDL.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -9,7 +8,7 @@
 #define CaseHeight 162
 #define N 4
 
-// gcc 2048.c -o 2048 $(sdl2-config --cflags --libs)  // COMMANDE DE COMPILATION
+// gcc 2048.c -o 2048 $(sdl2-config --cflags --libs) -lSDL_ttf  // COMMANDE DE COMPILATION
 // ./2048                                             // COMMANDE D'EXECUTION
 
 
@@ -22,24 +21,6 @@ void SDL_ExitWithError (const char *message)
 void AfficherSDL(int Grille[N][N], int skin_2048)
 {
 
-}
-SDL_bool Victoire (int Grille[N][N], SDL_bool program_launched)
-{
-    int i;
-    int j; 
-    for (i=0; i<N; i++)
-    {
-        for (j=0; j<N; j++)
-        {
-            if (Grille[i][j]==2048)
-            {
-                printf("Victoire !!!\n");
-                program_launched = SDL_FALSE;
-            }
-        }
-    }
-    
-    return program_launched;
 }
 void InitialiserGrille(int Grille[N][N])
 {
@@ -185,11 +166,42 @@ void DeplacerHaut(int Grille[N][N])
         }
     }
 }
+int ConditionFIN(int Grille[N][N])
+{
+    int i;
+    int j;
+    int condition =0;
+    int FIN=0;
+
+    for (i=0; i<N; i++)
+    {
+        for (j=0; j<N; j++)
+        {
+            if (((Grille[i][j]!=Grille[i+1][j])&&(Grille[i][j]!=Grille[i-1][j]))&&((Grille[i][j]!=Grille[i][j+1])&&(Grille[i][j]!=Grille[i][j+1])))
+            {
+                condition += 1;
+            }
+            if (Grille[i][j]==2048)
+            {
+                printf("Victoire !!!\n");
+                FIN = 2;
+            }
+        }
+    }
+    if (condition == 16)
+    {
+        FIN = 1;
+    }
+
+    return FIN;
+}
 void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
 {
     int i;
     int j;
     SDL_Rect Case;
+
+
     int r;
     int g; 
     int b; 
@@ -198,29 +210,43 @@ void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
     {
         for (j=0; j<N; j++)
         {
+            
             if (skin_2048 == 0)
             {
                 switch (Grille[i][j])
                 {
-                    default : r = 204; g = 192; b = 178; break;
-                    case 2 : r = 238; g = 228; b = 218; break;
-                    case 4 : r = 237; g = 224; b = 200; break;
-                    case 8 : r = 242; g = 177; b = 121; break;
-                    case 16 : r = 245; g = 149; b = 99; break;
-                    case 32 : r = 246; g = 124; b = 98; break;
-                    case 64 : r = 246; g = 94; b = 59; break;
-                    case 128 : r = 237; g = 207; b = 114; break;
-                    case 256 : r = 237; g = 204; b = 97; break;
-                    case 512 : r = 237; g = 200 ; b = 80; break;
-                    case 1024 : r = 237; g = 197; b = 63; break;
-                    case 2048 : r = 237; g = 194; b = 46; break;
+                    default : r = 255; g = 255; b = 255;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 100; g = 255; b = 0; break;
+                    case 2048 : r = 0; g = 255; b = 0; break;
                 }
+                
             }
             else 
             {
-                r=0;
-                b=0;
-                g=0;
+                switch (Grille[i][j])
+                {
+                    default : r = 0; g = 0; b = 0;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 100; g = 255; b = 0; break;
+                    case 2048 : r = 0; g = 255; b = 0; break;
+                }
             }
             Case.w = CaseWidth;
             Case.h = CaseHeight;
@@ -238,12 +264,6 @@ int main(int argc, char **argv)
     InitialiserGrille(Grille);
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;
-
-    if(TTF_Init()==-1) 
-    {
-        printf("TTF_Init: %s\n", TTF_GetError());
-        exit(2);
-    }
     
     if (SDL_Init(SDL_INIT_VIDEO) != 0)
     {
@@ -332,6 +352,7 @@ int main(int argc, char **argv)
     int var;
     int varx = 0;
     int vary = 0;
+    int FIN=0;
     while (program_launched)
     {
     	SDL_Event event;        
@@ -348,31 +369,49 @@ int main(int argc, char **argv)
                                     DeplacerDroite(Grille);
                                     affichageJeu(Grille, skin_2048, renderer);
                                     AjouterRandom(Grille);
-                                    program_launched = Victoire(Grille, program_launched);
-                                    if (program_launched == SDL_FALSE)
+                                    FIN = ConditionFIN(Grille);
+                                    if (FIN == 2)
                                     {
+                                        printf("VICTOIRE !\n");
+                                        program_launched = SDL_FALSE;
+                                        break;
+                                    }
+                                    else if (FIN == 1)
+                                    {
+                                        printf("Defaite \n");
+                                        program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else
                                     {
                                         continue;
                                     }
+                                    
                                 }
                             case SDLK_q :
                                 if (affichage_menu == 2)    
                                 {
                                     DeplacerGauche(Grille);
                                     affichageJeu(Grille, skin_2048, renderer);
-                                    AjouterRandom(Grille);;
-                                    program_launched = Victoire(Grille, program_launched);
-                                    if (program_launched == SDL_FALSE)
+                                    AjouterRandom(Grille);
+                                    FIN = ConditionFIN(Grille);
+                                    if (FIN == 2)
                                     {
+                                        printf("VICTOIRE !\n");
+                                        program_launched = SDL_FALSE;
+                                        break;
+                                    }
+                                    else if (FIN == 1)
+                                    {
+                                        printf("Defaite \n");
+                                        program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else
                                     {
                                         continue;
                                     }
+                                    
                                 }
                             case SDLK_z :
                                 if (affichage_menu == 2)
@@ -380,9 +419,17 @@ int main(int argc, char **argv)
                                     DeplacerHaut(Grille);
                                     affichageJeu(Grille, skin_2048, renderer);
                                     AjouterRandom(Grille);
-                                    program_launched = Victoire(Grille, program_launched);
-                                    if (program_launched == SDL_FALSE)
+                                    FIN = ConditionFIN(Grille);
+                                    if (FIN == 2)
                                     {
+                                        printf("VICTOIRE !\n");
+                                        program_launched = SDL_FALSE;
+                                        break;
+                                    }
+                                    else if (FIN == 1)
+                                    {
+                                        printf("Defaite \n");
+                                        program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else
@@ -396,9 +443,17 @@ int main(int argc, char **argv)
                                     DeplacerBas(Grille);
                                     affichageJeu(Grille, skin_2048, renderer);
                                     AjouterRandom(Grille);
-                                    program_launched = Victoire(Grille, program_launched);
-                                    if (program_launched == SDL_FALSE)
+                                    FIN = ConditionFIN(Grille);
+                                    if (FIN == 2)
                                     {
+                                        printf("VICTOIRE !\n");
+                                        program_launched = SDL_FALSE;
+                                        break;
+                                    }
+                                    else if (FIN == 1)
+                                    {
+                                        printf("Defaite \n");
+                                        program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else
@@ -840,7 +895,7 @@ int main(int argc, char **argv)
                         }
                         else if (settings == 5)
                         {
-                            image = SDL_LoadBMP("001.bmp");
+                            image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
                         }
                         if (image == NULL)
@@ -1339,7 +1394,6 @@ int main(int argc, char **argv)
     SDL_DestroyTexture(texture);
     SDL_DestroyRenderer(renderer);
     SDL_DestroyWindow(window);
-    TTF_Quit();
     SDL_Quit();
     
     return EXIT_SUCCESS;
