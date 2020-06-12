@@ -6,10 +6,10 @@
 #define WindowHeight 800
 #define CaseWidth 162
 #define CaseHeight 162
-#define CaseWidth2P 81
-#define CaseHeight2P 81
+#define CaseWidth8 84
+#define CaseHeight8 84
 #define N 4
-
+#define M 8
 // gcc 2048.c -o 2048 $(sdl2-config --cflags --libs) -lSDL_ttf  // COMMANDE DE COMPILATION
 // ./2048                                             // COMMANDE D'EXECUTION
 
@@ -20,10 +20,279 @@ void SDL_ExitWithError (const char *message)
 	SDL_Quit();
 	exit(EXIT_FAILURE);
 }
-void AfficherSDL(int Grille[N][N], int skin_2048)
-{
 
+void InitialiserGrille8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            Grille[i][j]=0;
+        }
+    }
+    i = rand()%8;
+    j = rand()%8;
+    Grille[i][j]=2;
+    i = rand()%8;
+    j = rand()%8;
+    Grille[i][j]=2;
 }
+void AjouterRandom8(int Grille[M][M])
+{
+    int i;
+    int j;
+    int i_init;
+    int j_init;
+    int premier=1;
+    int bon = 0;
+    int c2ou4 = 0;
+    i = rand()%8;
+    j = rand()%8;
+    i_init = i;
+    j_init = j;
+
+    while(bon==0)
+    {
+        if (((i_init == i)&&(j_init == j))&&(premier == 0))
+        {
+            break;
+        }
+        else
+        {
+            if(Grille[i][j]==0)
+            {
+                bon=1;
+                c2ou4= rand()%2;
+                if(c2ou4==0)
+                {
+                    Grille[i][j]=2;
+                }
+                if(c2ou4==1)
+                {
+                    Grille[i][j]=4;
+                }
+            }
+            else
+            {
+                if (j!=7)
+                {
+                    j += 1;
+                }
+                else if (j == 7)
+                {
+                    if (i!= 7)
+                    {
+                        i +=1;
+                        j=0;
+                    }
+                    else
+                    {
+                        i=0;
+                        j=0;
+                    }
+                    
+                }
+
+            }
+            premier = 0;
+        }
+    }
+}
+void DeplacerDroite8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (j<7)
+            {    
+                if (Grille[i][j]==Grille[i][j+1])
+                {
+                    Grille[i][j+1] = 2*Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i][j+1]==0)
+                {
+                    Grille[i][j+1]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerGauche8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (6-j>=0)   
+            { 
+                if (Grille[i][7-j]==Grille[i][6-j])
+                {
+                    Grille[i][6-j]+=Grille[i][7-j];
+                    Grille[i][7-j] = 0;
+                }
+                else if(Grille[i][6-j]==0)
+                {
+                    Grille[i][6-j]=Grille[i][7-j];
+                    Grille[i][7-j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerBas8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (i < 7   )
+            {
+                if (Grille[i][j]==Grille[i+1][j])
+                {
+                    Grille[i+1][j]+=Grille[i][j];
+                    Grille[i][j] = 0;
+                }
+                else if(Grille[i+1][j]==0)
+                {
+                    Grille[i+1][j]=Grille[i][j];
+                    Grille[i][j]=0;
+                }
+            }
+        }
+    }
+}
+void DeplacerHaut8(int Grille[M][M])
+{
+    int i;
+    int j;
+    for(i=0; i<M; i++)
+    {
+        for(j=0; j<M; j++)
+        {
+            if (6-i >= 0)
+            {
+                if (Grille[7-i][j]==Grille[6-i][j])
+                {
+                    Grille[6-i][j]+=Grille[7-i][j];
+                    Grille[7-i][j] = 0;
+                }
+                else if(Grille[6-i][j]==0)
+                {
+                    Grille[6-i][j]=Grille[7-i][j];
+                    Grille[7-i][j]=0;
+                }
+            }
+        }
+    }
+}
+int ConditionFIN8(int Grille[M][M])
+{
+    int i;
+    int j;
+    int condition =1;
+    int FIN=0;
+
+    for (i=0; i<M; i++)
+    {
+        for (j=0; j<M; j++)
+        {
+            if (((Grille[i][j]!=Grille[i+1][j])&&(Grille[i][j]!=Grille[i-1][j]))&&((Grille[i][j]!=Grille[i][j+1])&&(Grille[i][j]!=Grille[i][j+1])))
+            {
+                if (Grille[i][j]!=0)
+                {
+                    condition += 1;
+                }
+            }
+            if (Grille[i][j]==2048)
+            {
+                printf("Victoire !!!\n");
+                FIN = 2;
+            }
+        }
+    }
+    if (condition == 64)
+    {
+        FIN = 1;
+    }
+
+    return FIN;
+}
+void affichageJeu8(int Grille[M][M], int skin_2048, SDL_Renderer *renderer)
+{
+    int i;
+    int j;
+    SDL_Rect Case;
+
+
+    int r;
+    int g; 
+    int b; 
+    int a = 255; 
+    for (i=0; i<M; i++)
+    {
+        for (j=0; j<M; j++)
+        {
+            
+            if (skin_2048 == 0)
+            {
+                switch (Grille[i][j])
+                {
+                    default : r = 255; g = 255; b = 255;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
+                    case 2048 : r = 0; g = 0; b = 0; break;
+                }
+                
+            }
+            else 
+            {
+                switch (Grille[i][j])
+                {
+                    default : r = 0; g = 0; b = 0;break;
+                    case 2 : r = 255; g = 255; b = 0; break;
+                    case 4 : r = 0; g = 255; b = 0; break;
+                    case 8 : r = 0; g = 100; b = 0; break;
+                    case 16 : r = 0; g = 100; b = 255; break;
+                    case 32 : r = 0; g = 0; b = 255; break;
+                    case 64 : r = 100; g = 0; b = 255; break;
+                    case 128 : r = 255; g = 0; b = 100; break;
+                    case 256 : r = 255; g = 0; b = 0; break;
+                    case 512 : r = 255; g = 100 ; b = 0; break;
+                    case 1024 : r = 125; g = 125; b = 125; break;
+                    case 2048 : r = 255; g = 255; b = 255; break;
+                }
+            }
+            Case.w = CaseWidth8;
+            Case.h = CaseHeight8;
+            Case.x = 14 + (CaseWidth8+15)*j;
+            Case.y = 14 + (CaseHeight8+15)*i;
+        
+            
+            SDL_SetRenderDrawColor(renderer, r, g, b, a);
+            SDL_RenderFillRect(renderer, &Case);
+        }
+    }
+}
+
 void InitialiserGrille(int Grille[N][N])
 {
     int i;
@@ -113,7 +382,7 @@ void DeplacerDroite(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if(j+1<4)
+            if(j<3)
             {
                 if (Grille[i][j]==Grille[i][j+1])
                 {
@@ -129,7 +398,6 @@ void DeplacerDroite(int Grille[N][N])
         }
     }
 }
-
 void DeplacerGauche(int Grille[N][N])
 {
     int i;
@@ -138,7 +406,7 @@ void DeplacerGauche(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (j+1<4)
+            if (2-j>=0)
             {
                 if (Grille[i][3-j]==Grille[i][2-j])
                 {
@@ -154,7 +422,6 @@ void DeplacerGauche(int Grille[N][N])
         }
     }
 }
-
 void DeplacerBas(int Grille[N][N])
 {
     int i;
@@ -163,7 +430,7 @@ void DeplacerBas(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (i +1 < 4)
+            if (i  < 3)
             {
                 if (Grille[i][j]==Grille[i+1][j])
                 {
@@ -179,7 +446,6 @@ void DeplacerBas(int Grille[N][N])
         }
     }
 }
-
 void DeplacerHaut(int Grille[N][N])
 {
     int i;
@@ -188,7 +454,7 @@ void DeplacerHaut(int Grille[N][N])
     {
         for(j=0; j<N; j++)
         {
-            if (3-i >= 0)
+            if (2-i >= 0)
             {
                 if (Grille[3-i][j]==Grille[2-i][j])
                 {
@@ -204,6 +470,7 @@ void DeplacerHaut(int Grille[N][N])
         }
     }
 }
+
 int ConditionFIN(int Grille[N][N])
 {
     int i;
@@ -308,6 +575,8 @@ int main(int argc, char **argv)
     InitialiserGrille(Grille);
     int GrilleJ2[N][N];
     InitialiserGrille(GrilleJ2);
+    int Grille8[M][M];
+    InitialiserGrille8(Grille8);
     SDL_Window *window = NULL;
     SDL_Renderer *renderer = NULL;
     
@@ -400,6 +669,7 @@ int main(int argc, char **argv)
     int varx = 0;
     int vary = 0;
     int FIN=0;
+    int chgmnt_8x8=0;
     
     while (program_launched)
     {
@@ -414,79 +684,160 @@ int main(int argc, char **argv)
                             case SDLK_d :
                                 if (affichage_menu == 2)
                                 {
-                                    DeplacerDroite(Grille);
-                                    AjouterRandom(Grille);
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    FIN = ConditionFIN(Grille);
-                                    if (FIN == 2)
+                                    if (chgmnt_8x8 == 0)
                                     {
-                                        printf("VICTOIRE !\n");
-                                        image = SDL_LoadBMP("img/Victoire.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
+                                        DeplacerDroite(Grille);
+                                        AjouterRandom(Grille);
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        FIN = ConditionFIN(Grille);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            program_launched = SDL_FALSE;
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
-                                    else if (FIN == 1)
+                                    else if (chgmnt_8x8 == 1)
                                     {
-                                        printf("Defaite \n");
-                                        program_launched = SDL_FALSE;
-                                        image = SDL_LoadBMP("img/defaite.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        continue;
+                                        DeplacerDroite8(Grille8);
+                                        AjouterRandom8(Grille8);
+                                        affichageJeu8(Grille8, skin_2048, renderer);
+                                        FIN = ConditionFIN8(Grille8);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            program_launched = SDL_FALSE;
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
                                     
                                 }
                             case SDLK_q :
                                 if (affichage_menu == 2)    
                                 {
-                                    DeplacerGauche(Grille);
-                                    AjouterRandom(Grille);
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    FIN = ConditionFIN(Grille);
-                                    if (FIN == 2)
+                                    if (chgmnt_8x8 == 0)
                                     {
-                                        printf("VICTOIRE !\n");
-                                        image = SDL_LoadBMP("img/Victoire.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
+                                        DeplacerGauche(Grille);
+                                        AjouterRandom(Grille);
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        FIN = ConditionFIN(Grille);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
-                                    else if (FIN == 1)
+                                    else if (chgmnt_8x8 == 1)
                                     {
-                                        printf("Defaite \n");
-                                        image = SDL_LoadBMP("img/defaite.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        continue;
+                                        DeplacerGauche8(Grille8);
+                                        AjouterRandom8(Grille8);
+                                        affichageJeu8(Grille8, skin_2048, renderer);
+                                        FIN = ConditionFIN8(Grille8);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
                                     
                                 }
@@ -494,78 +845,158 @@ int main(int argc, char **argv)
                             case SDLK_z :
                                 if (affichage_menu == 2)
                                 {
-                                    DeplacerHaut(Grille);
-                                    AjouterRandom(Grille);
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    FIN = ConditionFIN(Grille);
-                                    if (FIN == 2)
+                                    if (chgmnt_8x8 == 0)
                                     {
-                                        printf("VICTOIRE !\n");
-                                        image = SDL_LoadBMP("img/Victoire.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
+                                        DeplacerHaut(Grille);
+                                        AjouterRandom(Grille);
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        FIN = ConditionFIN(Grille);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
-                                    else if (FIN == 1)
+                                    else if (chgmnt_8x8 == 1)
                                     {
-                                        printf("Defaite \n");
-                                        image = SDL_LoadBMP("img/defaite.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        continue;
+                                        DeplacerHaut8(Grille8);
+                                        AjouterRandom8(Grille8);
+                                        affichageJeu8(Grille8, skin_2048, renderer);
+                                        FIN = ConditionFIN8(Grille8);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
                                 }    
                             
                             case SDLK_s :
                                 if (affichage_menu == 2)
                                 {
-                                    DeplacerBas(Grille);
-                                    AjouterRandom(Grille);
-                                    affichageJeu(Grille, skin_2048, renderer);
-                                    FIN = ConditionFIN(Grille);
-                                    if (FIN == 2)
+                                    if (chgmnt_8x8 == 0)
                                     {
-                                        printf("VICTOIRE !\n");
-                                        image = SDL_LoadBMP("img/Victoire.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
+                                        DeplacerBas(Grille);
+                                        AjouterRandom(Grille);
+                                        affichageJeu(Grille, skin_2048, renderer);
+                                        FIN = ConditionFIN(Grille);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
-                                    else if (FIN == 1)
+                                    else if (chgmnt_8x8 == 1)
                                     {
-                                        printf("Defaite \n");
-                                        image = SDL_LoadBMP("img/defaite.bmp");
-                                        texture = SDL_CreateTextureFromSurface(renderer, image);
-                                        SDL_FreeSurface(image);
-                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
-                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
-                                        SDL_RenderPresent(renderer);
-                                        SDL_Delay(1500);
-                                        program_launched = SDL_FALSE;
-                                        break;
-                                    }
-                                    else
-                                    {
-                                        continue;
+                                        DeplacerBas8(Grille8);
+                                        AjouterRandom8(Grille8);
+                                        affichageJeu8(Grille8, skin_2048, renderer);
+                                        FIN = ConditionFIN8(Grille8);
+                                        if (FIN == 2)
+                                        {
+                                            printf("VICTOIRE !\n");
+                                            image = SDL_LoadBMP("img/Victoire.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else if (FIN == 1)
+                                        {
+                                            printf("Defaite \n");
+                                            image = SDL_LoadBMP("img/defaite.bmp");
+                                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                                            SDL_FreeSurface(image);
+                                            SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                            SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                            SDL_RenderPresent(renderer);
+                                            SDL_Delay(1500);
+                                            program_launched = SDL_FALSE;
+                                            break;
+                                        }
+                                        else
+                                        {
+                                            continue;
+                                        }
                                     }
                                 }    
                             
@@ -1101,6 +1532,8 @@ int main(int argc, char **argv)
                     {
                         
                         affichage_menu = 2;
+                        if (chgmnt_8x8 == 0)
+                        {
                             if (skin_2048 == 0)
                             {
                                 image = SDL_LoadBMP("img/grid.bmp");
@@ -1169,6 +1602,78 @@ int main(int argc, char **argv)
                                 }
                             }
                             continue;
+                        }
+                        else if (chgmnt_8x8 == 1)
+                        {
+                            if (skin_2048 == 0)
+                            {
+                                image = SDL_LoadBMP("img/grid8.bmp");
+                            }
+                            if (skin_2048 == 1)
+                            {
+                                image = SDL_LoadBMP("img/gridblack8.bmp");
+                            }        
+                            if (image == NULL)
+                            {
+                                SDL_DestroyRenderer(renderer);
+                                SDL_DestroyWindow(window);
+                                SDL_ExitWithError("Impossible de charger l'image");
+                                printf("Chargement");
+                            }
+            
+                            texture = SDL_CreateTextureFromSurface(renderer, image);
+                            SDL_FreeSurface(image);
+            
+                            if (texture == NULL)
+                            {
+                                SDL_DestroyRenderer(renderer);
+                                SDL_DestroyWindow(window);
+                                SDL_ExitWithError("Impossible de créer la texture");
+                            }
+
+                            SDL_Rect BG;
+            
+                            if (SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h) != 0)
+                            {
+                                SDL_DestroyRenderer(renderer);
+                                SDL_DestroyWindow(window);
+                                SDL_ExitWithError("Impossible de charger la texture");
+                            }
+            
+                            BG.x = (WindowWidth - BG.w)/2;
+                            BG.y = (WindowHeight - BG.h)/2;
+                                        
+                            if ( SDL_RenderCopy(renderer, texture, NULL, &BG) != 0 )
+                            {
+                                SDL_DestroyRenderer(renderer);
+                                SDL_DestroyWindow(window);
+                                SDL_ExitWithError("Impossible d'afficher la texture");
+                            }
+                            SDL_RenderPresent(renderer);
+                            int x;
+                            int y;
+                            int k;
+                            int pose = 0;
+                            while (pose==0)
+                            {
+                                x = rand()%4;
+                                y = rand()%4;
+                                if(Grille[x][y]==0)
+                                {
+                                    pose=1;
+                                    k = rand()%2;
+                                    if(k==1)
+                                    {
+                                        Grille[x][y]=2;
+                                    }
+                                    if(k==0)
+                                    {
+                                        Grille[x][y]=4;
+                                    }
+                                }
+                            }
+                            continue;
+                        }
                     }
                     
                     /* Cas où l'utilisateur clic sur 4x4 dans SETTINGS */
@@ -1179,31 +1684,37 @@ int main(int argc, char **argv)
                         {
                             image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
+                            chgmnt_8x8 = 0;
                         }
                         else if (settings == 1)
                         {
                             image = SDL_LoadBMP("img/000.bmp");
                             settings = 0;
+                            chgmnt_8x8 = 0;
                         }
                         else if (settings == 2)
                         {
                             image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
+                            chgmnt_8x8 = 0;
                         }
                         else if (settings == 3)
                         {
                             image = SDL_LoadBMP("img/010.bmp");
                             settings = 3;
+                            chgmnt_8x8 = 0;
                         }
                         else if (settings == 4)
                         {
                             image = SDL_LoadBMP("img/011.bmp");
                             settings = 4;
+                            chgmnt_8x8 = 0;
                         }
                         else if (settings == 5)
                         {
                             image = SDL_LoadBMP("img/001.bmp");
                             settings = 2;
+                            chgmnt_8x8 = 0;
                         }
                         if (image == NULL)
                         {
@@ -1253,12 +1764,14 @@ int main(int argc, char **argv)
                             image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                             joueur = 1;
+                            chgmnt_8x8 = 1;
                         }                        
                         else if (settings == 1)
                         {
                             image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
                             joueur = 1;
+                            chgmnt_8x8 = 1;
                         }
 
                         else if (settings == 2)
@@ -1266,23 +1779,27 @@ int main(int argc, char **argv)
                             image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                             joueur = 1;
+                            chgmnt_8x8 = 1;
                         }
                         else if (settings == 3)
                         {
                             image = SDL_LoadBMP("img/100.bmp");
                             settings = 1;
+                            chgmnt_8x8 = 1;
                         }
                         else if (settings == 4)
                         {
                             image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                             joueur = 1;
+                            chgmnt_8x8 = 1;
                         }
                         else if (settings == 5)
                         {
                             image = SDL_LoadBMP("img/101.bmp");
                             settings = 5;
                             joueur = 1;
+                            chgmnt_8x8 = 1;
                         }
                         if (image == NULL)
                         {
@@ -1699,19 +2216,27 @@ int main(int argc, char **argv)
     		}
     	    if (affichage_menu == 2)
             {
-                affichageJeu(Grille, skin_2048, renderer);
-                SDL_RenderPresent(renderer);
-                if (joueur == 2)
+                if (chgmnt_8x8 == 0)
                 {
-
-                    for (i=0; i<N; i++)
+                    affichageJeu(Grille, skin_2048, renderer);
+                    SDL_RenderPresent(renderer);
+                    if (joueur == 2)
                     {
-                        for (j=0; j<N; j++)
+
+                        for (i=0; i<N; i++)
                         {
-                            printf("|  %d  " , GrilleJ2[i][j]);
+                            for (j=0; j<N; j++)
+                            {
+                                printf("|  %d  " , GrilleJ2[i][j]);
+                            }
+                                printf("|\n");
                         }
-                            printf("|\n");
                     }
+                }
+                else if (chgmnt_8x8 == 1)
+                {
+                    affichageJeu8(Grille8, skin_2048, renderer);
+                    SDL_RenderPresent(renderer);
                 }
             }
         }
