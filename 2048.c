@@ -45,24 +45,60 @@ void AjouterRandom(int Grille[N][N])
 {
     int i;
     int j;
+    int i_init;
+    int j_init;
+    int premier=1;
     int bon = 0;
     int c2ou4 = 0;
+    i = rand()%4;
+    j = rand()%4;
+    i_init = i;
+    j_init = j;
+
     while(bon==0)
     {
-        i = rand()%4;
-        j = rand()%4;
-        if(Grille[i][j]==0)
+        if (((i_init == i)&&(j_init == j))&&(premier == 0))
         {
-            bon=1;
-            c2ou4= rand()%2;
-            if(c2ou4==0)
+            break;
+        }
+        else
+        {
+            if(Grille[i][j]==0)
             {
-                Grille[i][j]=2;
+                bon=1;
+                c2ou4= rand()%2;
+                if(c2ou4==0)
+                {
+                    Grille[i][j]=2;
+                }
+                if(c2ou4==1)
+                {
+                    Grille[i][j]=4;
+                }
             }
-            if(c2ou4==1)
+            else
             {
-                Grille[i][j]=4;
+                if (j!=3)
+                {
+                    j += 1;
+                }
+                else if (j == 3)
+                {
+                    if (i!= 3)
+                    {
+                        i +=1;
+                        j=0;
+                    }
+                    else
+                    {
+                        i=0;
+                        j=0;
+                    }
+                    
+                }
+
             }
+            premier = 0;
         }
     }
 }
@@ -170,7 +206,7 @@ int ConditionFIN(int Grille[N][N])
 {
     int i;
     int j;
-    int condition =0;
+    int condition =1;
     int FIN=0;
 
     for (i=0; i<N; i++)
@@ -376,12 +412,27 @@ int main(int argc, char **argv)
                                     if (FIN == 2)
                                     {
                                         printf("VICTOIRE !\n");
+                                        image = SDL_LoadBMP("img/Victoire.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else if (FIN == 1)
                                     {
                                         printf("Defaite \n");
+                                        program_launched = SDL_FALSE;
+                                        image = SDL_LoadBMP("img/defaite.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
@@ -401,12 +452,26 @@ int main(int argc, char **argv)
                                     if (FIN == 2)
                                     {
                                         printf("VICTOIRE !\n");
+                                        image = SDL_LoadBMP("img/Victoire.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else if (FIN == 1)
                                     {
                                         printf("Defaite \n");
+                                        image = SDL_LoadBMP("img/defaite.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
@@ -426,12 +491,26 @@ int main(int argc, char **argv)
                                     if (FIN == 2)
                                     {
                                         printf("VICTOIRE !\n");
+                                        image = SDL_LoadBMP("img/Victoire.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else if (FIN == 1)
                                     {
                                         printf("Defaite \n");
+                                        image = SDL_LoadBMP("img/defaite.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
@@ -450,12 +529,26 @@ int main(int argc, char **argv)
                                     if (FIN == 2)
                                     {
                                         printf("VICTOIRE !\n");
+                                        image = SDL_LoadBMP("img/Victoire.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
                                     else if (FIN == 1)
                                     {
                                         printf("Defaite \n");
+                                        image = SDL_LoadBMP("img/defaite.bmp");
+                                        texture = SDL_CreateTextureFromSurface(renderer, image);
+                                        SDL_FreeSurface(image);
+                                        SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h);
+                                        SDL_RenderCopy(renderer, texture, NULL, &BG);
+                                        SDL_RenderPresent(renderer);
+                                        SDL_Delay(1500);
                                         program_launched = SDL_FALSE;
                                         break;
                                     }
