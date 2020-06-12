@@ -10,8 +10,13 @@ Commande d'exécution : ./2048									SOUS LINUX
 
 Explication des carrés de couleurs 
 - Jaune représente le carré 2
-- Vert représente le carré 4
-- Bleu 1 représente le carré 8
-- Bleu 2 représente le carré 16
-- Bleu 3 représente le carré 32
-- Rouge 1 représente le carré 
+- Vert clair représente le carré 4
+- Vert foncé représente le carré 8
+- Bleu clair représente le carré 16
+- Bleu foncé représente le carré 32
+- Violet représente le carré 64
+- Rose représente le carré 128
+- Rouge représente le carré 256
+- Orange représente le carré 512
+- Gris représente le carré 1024
+- 2048 est représenté en Noir pour le skin 1 et en Blanc pour le skin 2
