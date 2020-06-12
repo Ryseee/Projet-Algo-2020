@@ -236,7 +236,8 @@ int ConditionFIN(int Grille[N][N])
 
     return FIN;
 }
-void affichageJeu2P(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
+
+void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
 {
     int i;
     int j;
@@ -289,84 +290,11 @@ void affichageJeu2P(int Grille[N][N], int skin_2048, SDL_Renderer *renderer)
                     case 2048 : r = 255; g = 255; b = 255; break;
                 }
             }
-
-            Case.w = CaseWidth2P;
-            Case.h = CaseHeight2P;
-            Case.x = 415 + (CaseWidth2P+15)*j;
-            Case.y = 15 + (CaseHeight2P+15)*i;
-            SDL_SetRenderDrawColor(renderer, r, g, b, a);
-            SDL_RenderFillRect(renderer, &Case);
-        }
-    }
-}
-
-void affichageJeu(int Grille[N][N], int skin_2048, SDL_Renderer *renderer, int joueur)
-{
-    int i;
-    int j;
-    SDL_Rect Case;
-
-
-    int r;
-    int g; 
-    int b; 
-    int a = 255; 
-    for (i=0; i<N; i++)
-    {
-        for (j=0; j<N; j++)
-        {
-            
-            if (skin_2048 == 0)
-            {
-                switch (Grille[i][j])
-                {
-                    default : r = 255; g = 255; b = 255;break;
-                    case 2 : r = 255; g = 255; b = 0; break;
-                    case 4 : r = 0; g = 255; b = 0; break;
-                    case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 100; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 255; break;
-                    case 64 : r = 100; g = 0; b = 255; break;
-                    case 128 : r = 255; g = 0; b = 100; break;
-                    case 256 : r = 255; g = 0; b = 0; break;
-                    case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 125; g = 125; b = 125; break;
-                    case 2048 : r = 0; g = 0; b = 0; break;
-                }
-                
-            }
-            else 
-            {
-                switch (Grille[i][j])
-                {
-                    default : r = 0; g = 0; b = 0;break;
-                    case 2 : r = 255; g = 255; b = 0; break;
-                    case 4 : r = 0; g = 255; b = 0; break;
-                    case 8 : r = 0; g = 100; b = 0; break;
-                    case 16 : r = 0; g = 100; b = 255; break;
-                    case 32 : r = 0; g = 0; b = 255; break;
-                    case 64 : r = 100; g = 0; b = 255; break;
-                    case 128 : r = 255; g = 0; b = 100; break;
-                    case 256 : r = 255; g = 0; b = 0; break;
-                    case 512 : r = 255; g = 100 ; b = 0; break;
-                    case 1024 : r = 125; g = 125; b = 125; break;
-                    case 2048 : r = 255; g = 255; b = 255; break;
-                }
-            }
-            if (joueur == 1)
-            {
-                Case.w = CaseWidth;
-                Case.h = CaseHeight;
-                Case.x = 30 + (CaseWidth+30)*j;
-                Case.y = 30 + (CaseHeight+30)*i;
-            }
-            else if (joueur == 2)
-            {
-                Case.w = CaseWidth;
-                Case.h = CaseHeight;
-                Case.x = 15 + (CaseWidth+15)*j;
-                Case.y = 15 + (CaseHeight+15)*i;
-            }
+            Case.w = CaseWidth;
+            Case.h = CaseHeight;
+            Case.x = 30 + (CaseWidth+30)*j;
+            Case.y = 30 + (CaseHeight+30)*i;
+        
             
             SDL_SetRenderDrawColor(renderer, r, g, b, a);
             SDL_RenderFillRect(renderer, &Case);
@@ -487,10 +415,8 @@ int main(int argc, char **argv)
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerDroite(Grille);
-                                    
-                                    affichageJeu(Grille, skin_2048, renderer, joueur);
-                                    
                                     AjouterRandom(Grille);
+                                    affichageJeu(Grille, skin_2048, renderer);
                                     FIN = ConditionFIN(Grille);
                                     if (FIN == 2)
                                     {
@@ -529,10 +455,8 @@ int main(int argc, char **argv)
                                 if (affichage_menu == 2)    
                                 {
                                     DeplacerGauche(Grille);
-                                    
-                                    affichageJeu(Grille, skin_2048, renderer, joueur);
-                                    
                                     AjouterRandom(Grille);
+                                    affichageJeu(Grille, skin_2048, renderer);
                                     FIN = ConditionFIN(Grille);
                                     if (FIN == 2)
                                     {
@@ -571,10 +495,8 @@ int main(int argc, char **argv)
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerHaut(Grille);
-                                    
-                                    affichageJeu(Grille, skin_2048, renderer, joueur);
-                                    
                                     AjouterRandom(Grille);
+                                    affichageJeu(Grille, skin_2048, renderer);
                                     FIN = ConditionFIN(Grille);
                                     if (FIN == 2)
                                     {
@@ -612,9 +534,8 @@ int main(int argc, char **argv)
                                 if (affichage_menu == 2)
                                 {
                                     DeplacerBas(Grille);
-                                    
-                                    affichageJeu(Grille, skin_2048, renderer, joueur);
                                     AjouterRandom(Grille);
+                                    affichageJeu(Grille, skin_2048, renderer);
                                     FIN = ConditionFIN(Grille);
                                     if (FIN == 2)
                                     {
@@ -655,8 +576,17 @@ int main(int argc, char **argv)
                                 {
                                     DeplacerDroite(GrilleJ2);
                                     
-                                    affichageJeu2P(GrilleJ2, skin_2048, renderer);
+                                    
                                     AjouterRandom(GrilleJ2);
+                                    for (i=0; i<N; i++)
+                                    {
+                                        for (j=0; j<N; j++)
+                                        {
+                                            printf("| %d " , GrilleJ2[i][j]);
+                                        }
+                                        printf("|\n");
+                                    }
+                                    printf("\n");
                                     FIN = ConditionFIN(GrilleJ2);
                                     if (FIN == 2)
                                     {
@@ -696,9 +626,16 @@ int main(int argc, char **argv)
                                 if ((affichage_menu == 2)&&(joueur==2))    
                                 {
                                     DeplacerGauche(GrilleJ2);
-                                    
-                                    affichageJeu2P(GrilleJ2, skin_2048, renderer);
                                     AjouterRandom(GrilleJ2);
+                                    for (i=0; i<N; i++)
+                                    {
+                                        for (j=0; j<N; j++)
+                                        {
+                                            printf("| %d " , GrilleJ2[i][j]);
+                                        }
+                                        printf("|\n");
+                                    }
+                                    printf("\n");
                                     FIN = ConditionFIN(GrilleJ2);
                                     if (FIN == 2)
                                     {
@@ -737,9 +674,16 @@ int main(int argc, char **argv)
                                 if ((affichage_menu == 2)&&(joueur==2))
                                 {
                                     DeplacerHaut(GrilleJ2);
-                                    
-                                    affichageJeu2P(GrilleJ2, skin_2048, renderer);
                                     AjouterRandom(GrilleJ2);
+                                    for (i=0; i<N; i++)
+                                    {
+                                        for (j=0; j<N; j++)
+                                        {
+                                            printf("| %d " , GrilleJ2[i][j]);
+                                        }
+                                        printf("|\n");
+                                    }
+                                    printf("\n");
                                     FIN = ConditionFIN(GrilleJ2);
                                     if (FIN == 2)
                                     {
@@ -777,9 +721,16 @@ int main(int argc, char **argv)
                                 if ((affichage_menu == 2)&&(joueur==2))
                                 {
                                     DeplacerBas(GrilleJ2);
-                                    
-                                    affichageJeu2P(GrilleJ2, skin_2048, renderer);
                                     AjouterRandom(GrilleJ2);
+                                    for (i=0; i<N; i++)
+                                    {
+                                        for (j=0; j<N; j++)
+                                        {
+                                            printf("| %d " , GrilleJ2[i][j]);
+                                        }
+                                        printf("|\n");
+                                    }
+                                    printf("\n");
                                     FIN = ConditionFIN(GrilleJ2);
                                     if (FIN == 2)
                                     {
@@ -1063,6 +1014,10 @@ int main(int argc, char **argv)
                                 }
                                 SDL_RenderPresent(renderer);
                             }
+                            else if (affichage_menu == 2)
+                            {
+                                continue;
+                            }
                             continue;
                 }
                 case SDL_MOUSEBUTTONDOWN :
@@ -1146,8 +1101,6 @@ int main(int argc, char **argv)
                     {
                         
                         affichage_menu = 2;
-                        if (joueur == 1)
-                        {
                             if (skin_2048 == 0)
                             {
                                 image = SDL_LoadBMP("img/grid.bmp");
@@ -1216,100 +1169,6 @@ int main(int argc, char **argv)
                                 }
                             }
                             continue;
-                        }
-                        else if (joueur == 2)
-                        {
-                            SDL_DestroyRenderer(renderer);
-                            SDL_DestroyWindow(window);
-                            SDL_Window *window = NULL;
-                            SDL_Renderer *renderer = NULL;
-                            SDL_CreateWindowAndRenderer(800, 400, 0, &window, &renderer);
-                            if (skin_2048 == 0)
-                            {
-                                image = SDL_LoadBMP("img/grid2P.bmp");
-                            }
-                            if (skin_2048 == 1)
-                            {
-                                image = SDL_LoadBMP("img/gridblack2P.bmp");
-                            }        
-                            if (image == NULL)
-                            {
-                                SDL_DestroyRenderer(renderer);
-                                SDL_DestroyWindow(window);
-                                SDL_ExitWithError("Impossible de charger l'image");
-                                printf("Chargement");
-                            }
-            
-                            texture = SDL_CreateTextureFromSurface(renderer, image);
-                            SDL_FreeSurface(image);
-            
-                            if (texture == NULL)
-                            {
-                                SDL_DestroyRenderer(renderer);
-                                SDL_DestroyWindow(window);
-                                SDL_ExitWithError("Impossible de créer la texture");
-                            }
-
-                            SDL_Rect BG;
-            
-                            if (SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h) != 0)
-                            {
-                                SDL_DestroyRenderer(renderer);
-                                SDL_DestroyWindow(window);
-                                SDL_ExitWithError("Impossible de charger la texture");
-                            }
-            
-                            BG.x = (800 - BG.w)/2;
-                            BG.y = (400 - BG.h)/2;
-                                        
-                            if ( SDL_RenderCopy(renderer, texture, NULL, &BG) != 0 )
-                            {
-                                SDL_DestroyRenderer(renderer);
-                                SDL_DestroyWindow(window);
-                                SDL_ExitWithError("Impossible d'afficher la texture");
-                            }
-                            SDL_RenderPresent(renderer);
-                            int x;
-                            int y;
-                            int x2;
-                            int y2;
-                            int k;
-                            int pose = 0;
-                            while (pose==0)
-                            {
-                                x = rand()%4;
-                                y = rand()%4;
-                                x2 = rand()%4;
-                                y2 = rand()%4;
-                                if(Grille[x][y]==0)
-                                {
-                                    pose=1;
-                                    k = rand()%2;
-                                    if(k==1)
-                                    {
-                                        Grille[x][y]=2;
-                                    }
-                                    if(k==0)
-                                    {
-                                        Grille[x][y]=4;
-                                    }
-                                }
-                                if(GrilleJ2[x2][y2]==0)
-                                {
-                                    pose=1;
-                                    k = rand()%2;
-                                    if(k==1)
-                                    {
-                                        GrilleJ2[x2][y2]=2;
-                                    }
-                                    if(k==0)
-                                    {
-                                        GrilleJ2[x2][y2]=4;
-                                    }
-                                }
-                            }
-                            continue;
-                        }
                     }
                     
                     /* Cas où l'utilisateur clic sur 4x4 dans SETTINGS */
@@ -1840,19 +1699,7 @@ int main(int argc, char **argv)
     		}
     	    if (affichage_menu == 2)
             {
-                for (i=0; i<N; i++)
-                {
-                    for (j=0; j<N; j++)
-                    {
-                        printf("| %d " , Grille[i][j]);
-                    }
-                    printf("|\n");
-                }
-                printf("\n");
-                
-                affichageJeu(Grille, skin_2048, renderer, joueur);
-                
-                affichageJeu(Grille, skin_2048, renderer, joueur);
+                affichageJeu(Grille, skin_2048, renderer);
                 SDL_RenderPresent(renderer);
             }
         }
