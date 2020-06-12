@@ -1,6 +1,6 @@
 PROJET D'ALGORITHMIQUE ET PROGRAMMATION PROCEDURALE
 
-Développé par Théophile Berthier, Hassan El Kabbaj, Romain Pignol.
+Développé par Romain Pignol, Théophile Berthier, Hassan El Kabbaj.
 
 Commande de compilation : gcc 2048.c -o 2048 $(sdl2-config --cflags --libs)		SOUS LINUX
 			   gcc src/2048.c -o bin/2048 -I include -L lib -lmingw32 -lSDL2 	SOUS WINDOWS
