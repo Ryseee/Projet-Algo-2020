@@ -222,6 +222,7 @@ int ConditionFIN(int Grille[N][N])
             {
                 printf("Victoire !!!\n");
                 FIN = 2;
+                break;
             }
         }
     }
