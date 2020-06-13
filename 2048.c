@@ -601,6 +601,12 @@ int main(int argc, char **argv)
     /* image de base */
     SDL_Surface *image = NULL;
     SDL_Texture *texture = NULL;
+
+    /* Modification de l'icone de la fenêtre*/
+    SDL_Surface *icone = NULL;
+    icone = SDL_LoadBMP("img/2048.bmp");
+    SDL_SetWindowIcon(window, icone);
+    SDL_FreeSurface(icone);
     /* Images des cases du Jeu */
     
 
@@ -1275,7 +1281,7 @@ int main(int argc, char **argv)
                                 else if (((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518)))
                                 {
                                     //afficher image assombrie
-                                    printf("C'EST LA CASE0 2\n");
+                                    
                                     image = SDL_LoadBMP("img/Button2.bmp");
 
                                     if (image == NULL)
@@ -1321,7 +1327,7 @@ int main(int argc, char **argv)
                                 else if (((X >= 200)&&(X <= 600))&&((Y >= 568)&&(Y<= 668)))
                                 {
                                     //afficher image assombrie
-                                    printf("C'EST LA CASE0 3\n");
+                                    
 
                                     image = SDL_LoadBMP("img/Button3.bmp");
 
@@ -2246,7 +2252,7 @@ int main(int argc, char **argv)
                     SDL_RenderPresent(renderer);
                     if (joueur == 2)
                     {
-
+                        printf("Joueur 2\n");
                         for (i=0; i<N; i++)
                         {
                             for (j=0; j<N; j++)
@@ -2255,6 +2261,7 @@ int main(int argc, char **argv)
                             }
                                 printf("|\n");
                         }
+                        printf("\n");
                     }
                 }
                 else if (chgmnt_8x8 == 1)
