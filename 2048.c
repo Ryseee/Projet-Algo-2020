@@ -664,12 +664,8 @@ int main(int argc, char **argv)
       skin_2048 = 1 <=> skin 2
     */
     int joueur = 1;            
-    int continuer = 0;
     int i;
     int j; 
-    int var;
-    int varx = 0;
-    int vary = 0;
     int FIN=0;
     int chgmnt_8x8=0;
     int tour = 0;
@@ -1230,12 +1226,11 @@ int main(int argc, char **argv)
                 {
                             int X = event.motion.x;
                             int Y = event.motion.y;
-                            if (((((((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518))))||((((X>= 200)&&(X <= 600))&&((Y >= 268)&&(Y<= 368)))))||((((X >= 200)&&(X <= 600))&&((Y >= 568)&&(Y<= 668)))))&&(affichage_menu == 0))
+                            if (affichage_menu == 0)
                             {
                                 if (((X >= 200)&&(X <= 600))&&((Y >= 268)&&(Y<= 368)))
                                 {
                                     //afficher image assombrie
-                                    printf("C'EST LA CASE0 1\n");
                                     image = SDL_LoadBMP("img/Button1.bmp");
                                     
                                     if (image == NULL)
@@ -1277,7 +1272,7 @@ int main(int argc, char **argv)
                                     SDL_RenderPresent(renderer);
                                 }
 
-                                if (((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518)))
+                                else if (((X >= 200)&&(X <= 600))&&((Y >= 418)&&(Y<= 518)))
                                 {
                                     //afficher image assombrie
                                     printf("C'EST LA CASE0 2\n");
@@ -1323,7 +1318,7 @@ int main(int argc, char **argv)
                                     //si il clique ça change de menu
                                 }
 
-                                if (((X >= 200)&&(X <= 600))&&((Y >= 568)&&(Y<= 668)))
+                                else if (((X >= 200)&&(X <= 600))&&((Y >= 568)&&(Y<= 668)))
                                 {
                                     //afficher image assombrie
                                     printf("C'EST LA CASE0 3\n");
@@ -1369,47 +1364,47 @@ int main(int argc, char **argv)
                                     SDL_RenderPresent(renderer);
                                     //si il clique ça change de menu
                                 }
-                            }
-                            else if (affichage_menu == 0)
-                            {
-                                image = SDL_LoadBMP("img/Menu.bmp");
-
-                                if (image == NULL)
+                                
+                                else 
                                 {
-                                    SDL_DestroyRenderer(renderer);
-                                    SDL_DestroyWindow(window);
-                                    SDL_ExitWithError("Impossible de charger l'image");
-                                    printf("Chargement");
-                                }
-    
-                                texture = SDL_CreateTextureFromSurface(renderer, image);
-                                SDL_FreeSurface(image);
-    
-                                if (texture == NULL)
-                                {
-                                    SDL_DestroyRenderer(renderer);
-                                    SDL_DestroyWindow(window);
-                                    SDL_ExitWithError("Impossible de créer la texture");
-                                }
-                                SDL_Rect BG;
-    
-                                if (SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h) != 0)
-                                {
-                                    SDL_DestroyRenderer(renderer);
-                                    SDL_DestroyWindow(window);
-                                    SDL_ExitWithError("Impossible de charger la texture");
-                                }
+                                    image = SDL_LoadBMP("img/Menu.bmp");
+                                    if (image == NULL)
+                                    {
+                                        SDL_DestroyRenderer(renderer);
+                                        SDL_DestroyWindow(window);
+                                        SDL_ExitWithError("Impossible de charger l'image");
+                                        printf("Chargement");
+                                    }
         
-                                BG.x = (WindowWidth - BG.w)/2;
-                                BG.y = (WindowHeight - BG.h)/2;
-                                    
-                                if ( SDL_RenderCopy(renderer, texture, NULL, &BG) != 0 )
-                                {
-                                    SDL_DestroyRenderer(renderer);
-                                    SDL_DestroyWindow(window);
-                                    SDL_ExitWithError("Impossible d'afficher la texture");
+                                    texture = SDL_CreateTextureFromSurface(renderer, image);
+                                    SDL_FreeSurface(image);
+        
+                                    if (texture == NULL)
+                                    {
+                                        SDL_DestroyRenderer(renderer);
+                                        SDL_DestroyWindow(window);
+                                        SDL_ExitWithError("Impossible de créer la texture");
+                                    }
+                                    SDL_Rect BG;
+        
+                                    if (SDL_QueryTexture(texture, NULL, NULL, &BG.w, &BG.h) != 0)
+                                    {
+                                        SDL_DestroyRenderer(renderer);
+                                        SDL_DestroyWindow(window);
+                                        SDL_ExitWithError("Impossible de charger la texture");
+                                    }
+            
+                                    BG.x = (WindowWidth - BG.w)/2;
+                                    BG.y = (WindowHeight - BG.h)/2;
+                                        
+                                    if ( SDL_RenderCopy(renderer, texture, NULL, &BG) != 0 )
+                                    {
+                                        SDL_DestroyRenderer(renderer);
+                                        SDL_DestroyWindow(window);
+                                        SDL_ExitWithError("Impossible d'afficher la texture");
+                                    }
+                                    SDL_RenderPresent(renderer);
                                 }
-                                SDL_RenderPresent(renderer);
                             }
                             else if (affichage_menu == 1)
                             {
